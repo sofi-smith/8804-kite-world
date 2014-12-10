@@ -13,3 +13,5 @@ wp-includes
 /.vagrant/
 Vagrantfile
 config.codekit
+
+config.codekit
