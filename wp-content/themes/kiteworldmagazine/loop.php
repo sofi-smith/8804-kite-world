@@ -1,0 +1,76 @@
+<?php
+/**
+ * Kite World Magazine template for displaying the standard Loop
+ *
+ * @package WordPress
+ * @subpackage Kite World Magazine
+ * @since Kite World Magazine 1.0
+ */
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="post-meta"><?php
+		kiteworldmagazine_post_meta(); ?>
+	</div>
+	<h1 class="post-title"><?php
+
+		if ( is_singular() ) :
+			the_title();
+		else : ?>
+
+			<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark"><?php
+				the_title(); ?>
+			</a><?php
+
+		endif; ?>
+
+	</h1>
+
+	<div class="sharing">
+
+<?php
+if ( function_exists( 'sharing_display' ) ) {
+    sharing_display( '', true );
+}
+ 
+if ( class_exists( 'Jetpack_Likes' ) ) {
+    $custom_likes = new Jetpack_Likes;
+    echo $custom_likes->post_likes( '' );
+}
+?>
+</div>	
+
+	
+
+	<div class="post-content"><?php
+
+		if ( '' != get_the_post_thumbnail() ) : ?>
+			<?php the_post_thumbnail(); ?><?php
+		endif; ?>
+
+		<?php if ( is_front_page() || is_category() || is_archive() || is_search() ) : ?>
+
+			<?php the_excerpt(); ?>
+			<a href="<?php the_permalink(); ?>"><?php _e( 'Read more &raquo;', 'kiteworldmagazine' ); ?></a>
+
+		<?php else : ?>
+
+			<?php the_content( __( 'Continue reading &raquo', 'kiteworldmagazine' ) ); ?>
+
+		<?php endif; ?>
+
+		<?php
+			wp_link_pages(
+				array(
+					'before'           => '<div class="linked-page-nav"><p>'. __( 'This article has more parts: ', 'kiteworldmagazine' ),
+					'after'            => '</p></div>',
+					'next_or_number'   => 'number',
+					'separator'        => ' ',
+					'pagelink'         => __( '&lt;%&gt;', 'kiteworldmagazine' ),
+				)
+			);
+		?>
+
+	</div>
+
+</article>

@@ -1,0 +1,553 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"post",
+				"post-block"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"blurb",
+				"section-blurb"
+			],
+			[
+				"font-size",
+				"font-size-h1"
+			],
+			[
+				"font-s",
+				"font-size-h4"
+			],
+			[
+				"font-",
+				"font-head-thin"
+			],
+			[
+				"font-head-",
+				"font-head-thin"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"paddi",
+				"padding"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"font-si",
+				"font-size"
+			],
+			[
+				"table-",
+				"table-cell"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"block",
+				"block-out"
+			],
+			[
+				"input-",
+				"input-border-focus"
+			],
+			[
+				"brand",
+				"brand-primary"
+			],
+			[
+				"font-head",
+				"font-head-thin"
+			],
+			[
+				"head",
+				"font-head-bold"
+			],
+			[
+				"font-siz",
+				"font-size-h3"
+			],
+			[
+				"backround-",
+				"background-color"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"backgoud",
+				"background-color"
+			],
+			[
+				"btn",
+				"btn-default"
+			],
+			[
+				"form-",
+				"form-control"
+			],
+			[
+				"border-radius",
+				"border-radius-base"
+			],
+			[
+				"comment",
+				"comment-text"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"border-",
+				"border-bottom"
+			],
+			[
+				"background-",
+				"background-image"
+			],
+			[
+				"padding-",
+				"padding-right"
+			],
+			[
+				"basefo",
+				"base-font-size"
+			],
+			[
+				"subheader",
+				"large-subheader"
+			],
+			[
+				"chunk",
+				"chunky-font-size"
+			],
+			[
+				"highlight",
+				"highlight-darker"
+			],
+			[
+				"chu",
+				"chunky-font-size"
+			],
+			[
+				"container",
+				"container-inner"
+			],
+			[
+				"padding",
+				"padding-right"
+			],
+			[
+				"script",
+				"script-font"
+			],
+			[
+				"modal",
+				"modal-dialog"
+			],
+			[
+				"ca",
+				"carousel"
+			],
+			[
+				"carousel",
+				"carousel-inner"
+			],
+			[
+				"background-i",
+				"background-image"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 287.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Disable Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/build/less/navs.less",
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/build/less/navbar.less",
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/custom/main-gallery-page.php",
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/build/less/variables.less",
+		"/Applications/MAMP/htdocs/berkeleysqcars/wp-content/themes/berkeleysquarechauffeurs/build/less/modals.less",
+		"/Applications/MAMP/htdocs/berkeleysqcars/wp-content/themes/berkeleysquarechauffeurs/build/less/forms.less",
+		"/Applications/MAMP/htdocs/berkeleysqcars/wp-content/themes/berkeleysquarechauffeurs/build/less/input-groups.less",
+		"/Applications/MAMP/htdocs/berkeleysqcars/wp-content/themes/berkeleysquarechauffeurs/functions.php",
+		"/Applications/MAMP/htdocs/berkeleysqcars/wp-content/themes/berkeleysquarechauffeurs/custom/main-page.php",
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/custom/main-video-page.php",
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/custom/main-gear-page.php",
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/custom/main-kiteshow-page.php",
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/build/less/mixins/forms.less",
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/build/less/forms.less",
+		"/Applications/MAMP/htdocs/kite-world/wp-includes/post.php",
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/functions.php",
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/loop.php",
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/custom/main-news-page.php",
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/build/less/code.less",
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/build/less/buttons.less",
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/build/less/scaffolding.less",
+		"/Applications/MAMP/htdocs/kite-world/wp-content/themes/kiteworldmagazine/build/less/mixins/tab-focus.less",
+		"/Applications/MAMP/htdocs/16-col-test/less/style.less",
+		"/Applications/MAMP/htdocs/flour-pot/wp-content/themes/flourpot/build/less/variables.less",
+		"/Applications/MAMP/htdocs/flour-pot/wp-content/themes/flourpot/favicon.ico",
+		"/Applications/MAMP/htdocs/flour-pot/wp-content/themes/flourpot/build/header.php",
+		"/Applications/MAMP/htdocs/holistic-health/wp-content/themes/holistichealth/custom/main-treatment-page.php",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/build/less/body.less",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/custom/work-with-page.php",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/footer.php",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/build/less/woocommerce-custom.less",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/build/less/forms.less",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/plugins/woocommerce/templates/checkout/form-checkout.php",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/build/less/navs.less",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/custom/products-main-page.php",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/woocommerce/content-product.php",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/plugins/ml-slider/assets/sliders/flexslider/flexslider.css",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/loop-empty.php",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/woocommerce/content-single-product.php",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/single.php",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/plugins/woocommerce/templates/cart/cart.php",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/custom/contact-page.php",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/build/less/products.less",
+		"/Users/Sofi1/Desktop/benefits amaveda.html",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/build/less/style.less",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/style.css",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/build/less/blog.less",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/build/less/code.less",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/styleold.css",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/custom/retreats-main-page.php",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/custom/retreats-details-page.php",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/front-page.php",
+		"/Applications/MAMP/htdocs/ama-veda/sftp-config.json",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/build/less/variables.less",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/build/less/buttons.less",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/build/less/navbar.less",
+		"/Applications/MAMP/htdocs/ama-veda/wp-content/themes/amaveda/build/js/src/amaveda.js",
+		"/Volumes/General-3/Clients/Filthy/Mailer/Active Filthy/James Zabiela/mailertest.html",
+		"/Users/Sofi1/Desktop/testthisemail.html",
+		"/Volumes/General/Corporate ID/Mailchimp Responsive Email Templates/Neptik Template/base_boxed_3column_query.html",
+		"/Users/Sofi1/Library/Application Support/Sublime Text 2/Packages/Shell Turtlestein/Shell Turtlestein.sublime-settings",
+		"/Applications/MAMP/htdocs/Neptiknew/app/_/css/animate.css",
+		"/Applications/MAMP/htdocs/Neptiknew/app/index.php",
+		"/Applications/MAMP/htdocs/TESTING/build/less/globals/form-modal.less",
+		"/Applications/MAMP/htdocs/Neptiknew/app/work.html",
+		"/Users/Sofi1/Library/Application Support/Sublime Text 2/Packages/LESS/LESS.sublime-settings",
+		"/Applications/MAMP/htdocs/TESTING/build/less/globals/colors.less",
+		"/Applications/MAMP/htdocs/TESTING/build/lib/font-awesome/css/font-awesome.min.css",
+		"/Applications/MAMP/htdocs/TESTING/test.php",
+		"/Applications/MAMP/htdocs/TESTING/build.xml",
+		"/Applications/MAMP/htdocs/TESTING/composer.json",
+		"/Applications/MAMP/htdocs/TESTING/composer.lock",
+		"/Applications/MAMP/htdocs/TESTING/composer.phar",
+		"/Applications/MAMP/htdocs/TESTING/README.md",
+		"/Applications/MAMP/htdocs/TESTING/build/less/globals/defaults.less",
+		"/Applications/MAMP/htdocs/TESTING/config.codekit",
+		"/Applications/MAMP/htdocs/neptik/_/css/main.css",
+		"/Applications/MAMP/htdocs/neptik/build/less/globals/custom-mixins.less",
+		"/Applications/MAMP/htdocs/neptik/_/js/effects.js",
+		"/Applications/MAMP/htdocs/neptik/build/less/globals/defaults.less",
+		"/Applications/MAMP/htdocs/neptik/approach.html.html",
+		"/Applications/MAMP/htdocs/neptik/testing.html",
+		"/Applications/MAMP/htdocs/neptik/indexold.html",
+		"/Applications/MAMP/htdocs/neptikfull/config.codekit",
+		"/Applications/MAMP/htdocs/neptikfull/indexold.html",
+		"/Applications/MAMP/htdocs/neptikfull/CHANGELOG",
+		"/Applications/MAMP/htdocs/neptikfull/README.md",
+		"/Applications/MAMP/htdocs/neptikfull/build/less/globals/retina1.1.0.less"
+	],
+	"find":
+	{
+		"height": 46.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"block-ou",
+			"min",
+			"exce",
+			"promo",
+			"travel",
+			"post-",
+			"media",
+			"font-size",
+			"uw",
+			"post",
+			"form",
+			"section",
+			"h1",
+			"font-size",
+			"font-s",
+			"link",
+			"border-ra",
+			"float: left",
+			"float:left",
+			"nav",
+			"navbar",
+			"focu",
+			"post-tit",
+			"@border-color",
+			"border-color",
+			"search",
+			"h1",
+			"nav",
+			"a",
+			"base",
+			"navbar",
+			"line-height",
+			"nav",
+			"button",
+			"p",
+			"dark-ac",
+			"font-head",
+			"font-heading",
+			"star",
+			"transi",
+			"strong",
+			"span.fa",
+			"testi-name",
+			"toggle",
+			"stores",
+			"star",
+			"footer",
+			"background-image",
+			"footer",
+			"location",
+			"story",
+			"img",
+			"content",
+			"footer",
+			"middot",
+			"content",
+			"darken",
+			"i",
+			"background",
+			"lighten",
+			"darke",
+			"2x",
+			"blog",
+			"list",
+			"benef",
+			"navbar-toggle",
+			".navbar-toggle",
+			"toggle",
+			"body",
+			"footer",
+			"after",
+			"sign",
+			"section",
+			"testimo",
+			"testi",
+			"btn",
+			".transi",
+			"footer",
+			"select",
+			".nav ",
+			".nav > li",
+			"gly",
+			"product-item",
+			"skin",
+			"h2",
+			"calculate",
+			"woocommer",
+			"h2",
+			"animate",
+			"jquery",
+			"padding-bottom",
+			"input",
+			"textarea",
+			"font",
+			"contact",
+			"media",
+			"placeholder",
+			"shop_table",
+			"woocommerce-billing-fields",
+			"height:50p",
+			"height",
+			"button",
+			"vertical-align: middle;\n  line-height: 1em;",
+			"table.cart input,\n#content table.cart input",
+			"@ssubtext",
+			"@high",
+			".border",
+			"@secondar",
+			"100%",
+			"border-rad",
+			"input",
+			"focus",
+			"@secondary",
+			"icon-font",
+			"cart button",
+			"add to cart button",
+			".border",
+			"border",
+			"secondary",
+			"subte",
+			"heading",
+			"mobile",
+			"modal",
+			"products",
+			"pre class",
+			"brush: php; gutter: false",
+			"woocommerce pre",
+			"pre"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 75.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 296.0,
+	"status_bar_visible": true
+}

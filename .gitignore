@@ -1,0 +1,13 @@
+node_modules
+wp-admin
+wp-includes
+/index.php
+/wp-*.php
+/xmlrpc.php
+/.settings/
+/.project
+.gitattributes
+/.buildpath
+.idea
+.remote-sync.json
+/.vagrant/
