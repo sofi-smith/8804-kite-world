@@ -862,20 +862,32 @@ function cd_meta_box_save( $post_id )
 
     // if our current user can't edit this post, bail
     if( !current_user_can( 'edit_post' ) ) return;
-
+    $allowed_post = array(
+        'a' => array(
+            'href' => array(),
+            'title' => array()
+        ),
+        'br' => array(),
+        'em' => array(),
+        'strong' => array(),
+        'h1' => array(),
+        'h2' => array(),
+        'h3' => array(),
+        'p' => array()
+    );
     // Make sure your data is set before trying to save it
     if( isset( $_POST['kiteworld_setup'] ) ) {
-        update_post_meta( $post_id, 'kiteworld_lure', wp_kses( $_POST['kiteworld_lure'], $allowed ) );
-        update_post_meta( $post_id, 'kiteworld_setup', wp_kses( $_POST['kiteworld_setup'], $allowed ) );
-        update_post_meta( $post_id, 'kiteworld_weather', wp_kses( $_POST['kiteworld_weather'], $allowed ) );
-        update_post_meta( $post_id, 'kiteworld_shops', wp_kses( $_POST['kiteworld_shops'], $allowed ) );
-        update_post_meta( $post_id, 'kiteworld_accommodation', wp_kses( $_POST['kiteworld_accommodation'], $allowed ) );
-        update_post_meta( $post_id, 'kiteworld_activities', wp_kses( $_POST['kiteworld_activities'], $allowed ) );
-        update_post_meta( $post_id, 'kiteworld_practicalities', wp_kses( $_POST['kiteworld_practicalities'], $allowed ) );
-        update_post_meta( $post_id, 'kiteworld_spare1', wp_kses( $_POST['kiteworld_spare1'], $allowed ) );
-        update_post_meta( $post_id, 'kiteworld_spare2', wp_kses( $_POST['kiteworld_spare2'], $allowed ) );
-        update_post_meta( $post_id, 'kiteworld_condition_rating', wp_kses( $_POST['kiteworld_condition_rating'], $allowed ));
-        update_post_meta( $post_id, 'kiteworld_weather_rating', wp_kses( $_POST['kiteworld_weather_rating'], $allowed ));
+        update_post_meta( $post_id, 'kiteworld_lure', wp_kses( $_POST['kiteworld_lure'], $allowed_post ) );
+        update_post_meta( $post_id, 'kiteworld_setup', wp_kses( $_POST['kiteworld_setup'], $allowed_post ) );
+        update_post_meta( $post_id, 'kiteworld_weather', wp_kses( $_POST['kiteworld_weather'], $allowed_post ) );
+        update_post_meta( $post_id, 'kiteworld_shops', wp_kses( $_POST['kiteworld_shops'], $allowed_post ) );
+        update_post_meta( $post_id, 'kiteworld_accommodation', wp_kses( $_POST['kiteworld_accommodation'], $allowed_post ) );
+        update_post_meta( $post_id, 'kiteworld_activities', wp_kses( $_POST['kiteworld_activities'], $allowed_post ) );
+        update_post_meta( $post_id, 'kiteworld_practicalities', wp_kses( $_POST['kiteworld_practicalities'], $allowed_post ) );
+        update_post_meta( $post_id, 'kiteworld_spare1', wp_kses( $_POST['kiteworld_spare1'], $allowed_post ) );
+        update_post_meta( $post_id, 'kiteworld_spare2', wp_kses( $_POST['kiteworld_spare2'], $allowed_post ) );
+        update_post_meta( $post_id, 'kiteworld_condition_rating', wp_kses( $_POST['kiteworld_condition_rating'], $allowed_post ));
+        update_post_meta( $post_id, 'kiteworld_weather_rating', wp_kses( $_POST['kiteworld_weather_rating'], $allowed_post ));
     }
 }
 function jptweak_remove_share() {

@@ -133,7 +133,7 @@ get_header();
             <div class="post-container row">
             <div id="travel-results">
                <?php
-
+                $search = null;
                if(!empty($_POST['country'])):
                    $search .= ','.$_POST['country'];
                elseif(!empty($_POST['continent'])):

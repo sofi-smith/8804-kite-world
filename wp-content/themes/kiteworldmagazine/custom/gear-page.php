@@ -16,34 +16,37 @@ get_header(); ?>
 
         <div class="search-facility gear-search">
           <h1 class="block-out">Filter Gear Reviews</h1>
-          <form class="" action="./?page_id=334" method="post">
+          <form class="" action="http://localhost:8804/?page_id=334" method="post">
             <div class="form-items">
-            <select name="gear" class="form-control">
-              <option value=""><?php echo esc_attr(__('All types of equipment')); ?></option>
-              <?php
-                $args = array(
-	                 'type'                     => 'gear',
-                     //'child_of'                  => 163,
-	                 'parent'                   => 163,
-	                 'orderby'                  => 'name',
-	                 'order'                    => 'ASC',
-	                 'hide_empty'               => 0,
-	                  //'hierarchical'             => 1,
-	                  //'exclude'                  => '',
-	                  //'include'                  => '',
-	                  //'number'                   => '',
-	                  'taxonomy'                 => 'gear_name',
-	                   //'pad_counts'               => false
-                  );
-                  $categories = get_categories($args);
-                  foreach ($categories as $category) {
-  	                 $option = '<option value="'.$category->cat_ID.'">';
-	                   $option .= $category->cat_name;
-	                   $option .= '</option>';
-	                   echo $option;
-                  }
-                ?>
-            </select>
+                <select name="gear-type" class="col-sm-16 form-control">
+                    <option value=""><?php echo esc_attr(__('All types of equipment')); ?></option>
+
+                    <?php
+                    $args = array(
+                        'type'                     => 'gear',
+                        //'child_of'                 => 5,
+                        'parent'                   => 163,
+                        'orderby'                  => 'name',
+                        'order'                    => 'ASC',
+                        'hide_empty'               => 0,
+                        //'hierarchical'             => 1,
+                        //'exclude'                  => '',
+                        //'include'                  => '',
+                        //'number'                   => '',
+                        'taxonomy'                 => 'gear_name',
+                        //'pad_counts'               => false
+                    );
+                    $categories = get_categories($args);
+                    foreach ($categories as $category) {
+                        $option = '<option value="'.$category->cat_ID.'">';
+                        $option .= $category->cat_name;
+                        $option .= '</option>';
+                        echo $option;
+                    }
+                    wp_reset_query();
+                    wp_reset_postdata();
+                    ?>
+                </select>
             <div class="row">
               <fieldset class="col-sm-8">
                   <h3>Skill Level</h3>
@@ -69,6 +72,8 @@ get_header(); ?>
                       $option = '<input type="checkbox" name="level[]" value="'.$category->cat_ID.'"> '.$category->cat_name.'</br>';
                       echo $option;
                   }
+                  wp_reset_query();
+                  wp_reset_postdata();
                   ?>
               </fieldset>
               <fieldset class="col-sm-8">
@@ -95,12 +100,14 @@ get_header(); ?>
                       $option = '<input type="checkbox" name="condition[]" value="'.$category->cat_ID.'"> '.$category->cat_name.'</br>';
                       echo $option;
                   }
+                  wp_reset_query();
+                  wp_reset_postdata();
                   ?>
               </fieldset>
             </div>
           </div>
               <fieldset class="btn-bar">
-                  <input type="submit" name="search" value="search"></input>
+                  <input type="submit" name="search" value="search" />
               </fieldset>
           </form>
         </div>
@@ -116,7 +123,7 @@ get_header(); ?>
             <?php
             $args = array(
               'posts_per_page' => 8,
-              'post_type' => 'gallery'
+              'post_type' => 'gear'
             );
             query_posts($args);
             if ( have_posts() ):

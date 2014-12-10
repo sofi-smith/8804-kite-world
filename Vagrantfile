@@ -119,5 +119,5 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # chef-validator, unless you changed the configuration.
   #
   #   chef.validation_client_name = "ORGNAME-validator"
-  config.vm.provision :shell,:path=>'../Provision/Shell/ubuntu-precise.sh'
+  config.vm.provision :shell, :path=>'../../Deployment/Shell/ubuntu-precise.sh'
 end

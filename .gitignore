@@ -11,3 +11,4 @@ wp-includes
 .idea
 .remote-sync.json
 /.vagrant/
+Vagrantfile

@@ -36,6 +36,8 @@ get_header(); ?>
                                 	$option .= '</option>';
                                 	echo $option;
                                   }
+                            wp_reset_query();
+                            wp_reset_postdata();
                             ?>
                         </select>
                     </div>
@@ -63,6 +65,8 @@ get_header(); ?>
                                 	echo $option;
                                     }
                                   }
+                            wp_reset_query();
+                            wp_reset_postdata();
                              ?>
                         </select>
                     </div>
@@ -89,6 +93,8 @@ get_header(); ?>
                           	$option = '<input type="checkbox" name="style[]" value="'.$category->cat_ID.'"> '.$category->cat_name.'</br>';
                         	echo $option;
                           }
+                         wp_reset_query();
+                         wp_reset_postdata();
                          ?>
                      </fieldset>
                      <fieldset class="col-sm-3">
@@ -113,6 +119,8 @@ get_header(); ?>
                           	$option = '<input type="checkbox" name="season[]" value="'.$category->cat_ID.'"> '.$category->cat_name.'</br>';
                         	echo $option;
                           }
+                         wp_reset_query();
+                         wp_reset_postdata();
                          ?>
                      </fieldset>
                    </div>
