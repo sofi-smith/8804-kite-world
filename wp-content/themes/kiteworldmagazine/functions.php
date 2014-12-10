@@ -166,7 +166,7 @@ function custom_post_magazine() {
 		'description'   => 'Holds the magazine articles data',
 		'public'        => true,
 	        'menu_position' => 30,
-		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats' ),
+		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats' , 'tags'),
 		'has_archive'   => true,
 		'rewrite' => array( 'slug' => 'magazine', 'with_front' => true ),
 	);
@@ -217,7 +217,7 @@ function custom_post_news() {
 		'description'   => 'Holds the magazine articles data',
 		'public'        => true,
 	        'menu_position' => 30,
-		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats' ),
+		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats', 'tags' ),
 		'has_archive'   => true,
 		'rewrite' => array( 'slug' => 'news', 'with_front' => true ),
 	);
@@ -267,7 +267,7 @@ function custom_post_gear() {
 		'description'   => 'Holds the gear data',
 		'public'        => true,
 	        'menu_position' => 30,
-		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats' ),
+		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats', 'tags' ),
 		'has_archive'   => true,
 		'rewrite' => array( 'slug' => 'gear', 'with_front' => true ),
 	);
@@ -317,7 +317,7 @@ function custom_post_travel() {
 		'description'   => 'Holds the magazine articles data',
 		'public'        => true,
 	        'menu_position' => 30,
-		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats' ),
+		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats', 'tags' ),
 		'has_archive'   => true,
 		'rewrite' => array( 'slug' => 'travel', 'with_front' => true ),
 	);
@@ -341,6 +341,7 @@ function taxonomies_travel() {
 	$args = array(
 		'labels' => $labels,
 		'hierarchical' => true,
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats', 'tags' ),
 	);
 	register_taxonomy( 'travel_name', 'travel', $args );
 }
@@ -370,6 +371,7 @@ function custom_post_technique() {
 		'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
 		'has_archive'   => true,
 		'rewrite' => array( 'technique' => 'zombies', 'with_front' => true ),
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats', 'tags' ),
 	);
 	register_post_type( 'technique', $args );
 	flush_rewrite_rules( false );
@@ -391,6 +393,7 @@ function taxonomies_technique() {
 	$args = array(
 		'labels' => $labels,
 		'hierarchical' => true,
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats', 'tags' ),
 	);
 	register_taxonomy( 'technique_name', 'technique', $args );
 }
@@ -420,6 +423,7 @@ function custom_post_feature() {
 		'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
 		'has_archive'   => true,
 		'rewrite' => array( 'slug' => 'feature', 'with_front' => true ),
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats', 'tags' ),
 	);
 	register_post_type( 'feature', $args );
 	flush_rewrite_rules( false );
@@ -441,6 +445,7 @@ function taxonomies_feature() {
 	$args = array(
 		'labels' => $labels,
 		'hierarchical' => true,
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats', 'tags' ),
 	);
 	register_taxonomy( 'feature_name', 'feature', $args );
 }
@@ -470,6 +475,7 @@ function custom_post_gallery() {
 		'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
 		'has_archive'   => true,
 		'rewrite' => array( 'slug' => 'gallery', 'with_front' => true ),
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats', 'tags' ),
 	);
 	register_post_type( 'gallery', $args );
 	flush_rewrite_rules( false );
@@ -491,6 +497,7 @@ function taxonomies_gallery() {
 	$args = array(
 		'labels' => $labels,
 		'hierarchical' => true,
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats', 'tags' ),
 	);
 	register_taxonomy( 'gallery_name', 'gallery', $args );
 }
@@ -520,6 +527,7 @@ function custom_post_videos() {
 		'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
 		'has_archive'   => true,
 		'rewrite' => array( 'slug' => 'video', 'with_front' => true ),
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats', 'tags' ),
 	);
 	register_post_type( 'video', $args );
 	flush_rewrite_rules( false );
@@ -541,6 +549,7 @@ function taxonomies_videos() {
 	$args = array(
 		'labels' => $labels,
 		'hierarchical' => true,
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats', 'tags' ),
 	);
 	register_taxonomy( 'video_name', 'video', $args );
 }
@@ -570,6 +579,7 @@ function custom_post_kiteshow() {
 		'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
 		'has_archive'   => true,
 		'rewrite' => array( 'slug' => 'kiteshow', 'with_front' => true ),
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats', 'tags' ),
 	);
 	register_post_type( 'kiteshow', $args );
 	flush_rewrite_rules( false );
@@ -591,6 +601,7 @@ function taxonomies_kiteshow() {
 	$args = array(
 		'labels' => $labels,
 		'hierarchical' => true,
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats', 'tags' ),
 	);
 	register_taxonomy( 'kiteshow_name', 'kiteshow', $args );
 }

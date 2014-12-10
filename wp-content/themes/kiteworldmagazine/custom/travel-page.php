@@ -157,26 +157,29 @@ get_header(); ?>
         </div>
         </section>
         <section class="article-group page-content third">
-          <h1 class="section-title">Featured</h1>
-          <div class="post-container">
-            <?php
-            $args = array(
-              'posts_per_page' => 8,
-              'post_type' => 'featured'
-            );
-            query_posts($args);
-            if ( have_posts() ):
-              while ( have_posts() ) :
-                the_post();
-                get_template_part( 'loop', get_post_type() );
-              endwhile;
-              else :
-                get_template_part( 'loop', 'empty' );
-              endif;
-              wp_reset_query();
-              ?>
-                ?>
-          </div>
+            <div class="post-container row">
+                <h1 class="section-title">Featured</h1>
+                <div class="post-container">
+                    <?php
+
+                    $args = array(
+                        'post_type' => array('news','gear','travel','feature','gallery','magazine','technique','video'),
+                        'posts_per_page' => 8,
+                        'meta_key' => 'featured',
+                    );
+                    query_posts($args);
+                    if ( have_posts() ):
+                        while ( have_posts() ) :
+                            the_post();
+                            get_template_part( 'loop', get_post_type() );
+                        endwhile;
+                    else :
+                        get_template_part( 'loop', 'empty' );
+                    endif;
+                    wp_reset_query();
+                    ?>
+                </div>
+            </div>
         </section>
         <section class="page-content fourth row">
 
