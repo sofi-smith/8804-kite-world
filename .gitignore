@@ -12,3 +12,4 @@ wp-includes
 .remote-sync.json
 /.vagrant/
 Vagrantfile
+config.codekit
