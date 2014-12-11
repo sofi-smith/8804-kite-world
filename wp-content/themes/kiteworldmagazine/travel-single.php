@@ -98,6 +98,12 @@
                 echo $kiteworld_shops;
                 ?>
             </section>
+            <section class="shops">
+              <?php
+              $kiteworld_shops = get_post_meta($post->ID, 'kiteworld_condition_rating', true);
+              echo $kiteworld_shops;
+              ?>
+            </section>
 
 
         <?php endif; ?>

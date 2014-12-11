@@ -840,24 +840,64 @@ function kiteworld8_param_post_meta_box_cb( $post )
 } // close m_param_post_meta_box_cb function
 
 function kiteworld9_param_post_meta_box_cb( $post ) {
-    $value1 = get_post_meta( $post->ID, 'kiteworld_condition_rating', true );
-    $value2 = get_post_meta( $post->ID, 'kiteworld_weather_rating', true );
+    $value1 = get_post_meta( $post->ID, 'kiteworld_wave_rating', true );
+    $value2 = get_post_meta( $post->ID, 'kiteworld_flat_rating', true );
+		$value3 = get_post_meta( $post->ID, 'kiteworld_beginner_rating', true );
+		$value4 = get_post_meta( $post->ID, 'kiteworld_water_temp_rating', true );
+		$value5 = get_post_meta( $post->ID, 'kiteworld_onsite_rating', true );
+		$value6 = get_post_meta( $post->ID, 'kiteworld_activities_rating', true );
     ?>
-    <label for="kiteworld_condition_rating"><?php _e( "Choose Condition Rating:", 'choose_value' ); ?></label>
+		<div style="display: inline-block">
+    <label for="kiteworld_waves_rating"><?php _e( "Choose Waves Rating:", 'choose_value' ); ?></label>
     <br />
-    <input type="radio" name="kiteworld_condition_rating" value="1" <?php checked( $value1, '1' ); ?> >1<br>
-    <input type="radio" name="kiteworld_condition_rating" value="2" <?php checked( $value1, '2' ); ?> >2<br>
-    <input type="radio" name="kiteworld_condition_rating" value="3" <?php checked( $value1, '3' ); ?> >3<br>
-    <input type="radio" name="kiteworld_condition_rating" value="4" <?php checked( $value1, '4' ); ?> >4<br>
-    <input type="radio" name="kiteworld_condition_rating" value="5" <?php checked( $value1, '5' ); ?> >5<br>
+    <input type="radio" name="kiteworld_wave_rating" value="1" <?php checked( $value1, '1' ); ?> >1<br>
+    <input type="radio" name="kiteworld_wave_rating" value="2" <?php checked( $value1, '2' ); ?> >2<br>
+    <input type="radio" name="kiteworld_wave_rating" value="3" <?php checked( $value1, '3' ); ?> >3<br>
+    <input type="radio" name="kiteworld_wave_rating" value="4" <?php checked( $value1, '4' ); ?> >4<br>
+    <input type="radio" name="kiteworld_wave_rating" value="5" <?php checked( $value1, '5' ); ?> >5<br>
 
-    <label for="kiteworld_condition_rating"><?php _e( "Choose Weather Rating:", 'choose_value' ); ?></label>
+    <label for="kiteworld_flat_rating"><?php _e( "Choose Flat Rating:", 'choose_value' ); ?></label>
     <br />
-    <input type="radio" name="kiteworld_weather_rating" value="1" <?php checked( $value2, '1' ); ?> >1<br>
-    <input type="radio" name="kiteworld_weather_rating" value="2" <?php checked( $value2, '2' ); ?> >2<br>
-    <input type="radio" name="kiteworld_weather_rating" value="3" <?php checked( $value2, '3' ); ?> >3<br>
-    <input type="radio" name="kiteworld_weather_rating" value="4" <?php checked( $value2, '4' ); ?> >4<br>
-    <input type="radio" name="kiteworld_weather_rating" value="5" <?php checked( $value2, '5' ); ?> >5<br>
+    <input type="radio" name="kiteworld_flat_rating" value="1" <?php checked( $value2, '1' ); ?> >1<br>
+    <input type="radio" name="kiteworld_flat_rating" value="2" <?php checked( $value2, '2' ); ?> >2<br>
+    <input type="radio" name="kiteworld_flat_rating" value="3" <?php checked( $value2, '3' ); ?> >3<br>
+    <input type="radio" name="kiteworld_flat_rating" value="4" <?php checked( $value2, '4' ); ?> >4<br>
+    <input type="radio" name="kiteworld_flat_rating" value="5" <?php checked( $value2, '5' ); ?> >5<br>
+	</div>
+	<div style="display: inline-block">
+		<label for="kiteworld_beginner_rating"><?php _e( "Choose Beginner Rating:", 'choose_value' ); ?></label>
+		<br />
+		<input type="radio" name="kiteworld_beginner_rating" value="1" <?php checked( $value3, '1' ); ?> >1<br>
+		<input type="radio" name="kiteworld_beginner_rating" value="2" <?php checked( $value3, '2' ); ?> >2<br>
+		<input type="radio" name="kiteworld_beginner_rating" value="3" <?php checked( $value3, '3' ); ?> >3<br>
+		<input type="radio" name="kiteworld_beginner_rating" value="4" <?php checked( $value3, '4' ); ?> >4<br>
+		<input type="radio" name="kiteworld_beginner_rating" value="5" <?php checked( $value3, '5' ); ?> >5<br>
+
+		<label for="kiteworld_water_temp_rating"><?php _e( "Choose Water Temperature Rating:", 'choose_value' ); ?></label>
+		<br />
+		<input type="radio" name="kiteworld_water_temp_rating" value="1" <?php checked( $value4, '1' ); ?> >1<br>
+		<input type="radio" name="kiteworld_water_temp_rating" value="2" <?php checked( $value4, '2' ); ?> >2<br>
+		<input type="radio" name="kiteworld_water_temp_rating" value="3" <?php checked( $value4, '3' ); ?> >3<br>
+		<input type="radio" name="kiteworld_water_temp_rating" value="4" <?php checked( $value4, '4' ); ?> >4<br>
+		<input type="radio" name="kiteworld_water_temp_rating" value="5" <?php checked( $value4, '5' ); ?> >5<br>
+	</div>
+	<div style="display: inline-block">
+		<label for="kiteworld_onsite_rating"><?php _e( "Choose Onsite Facilities Rating:", 'choose_value' ); ?></label>
+		<br />
+		<input type="radio" name="kiteworld_onsite_rating" value="1" <?php checked( $value5, '1' ); ?> >1<br>
+		<input type="radio" name="kiteworld_onsite_rating" value="2" <?php checked( $value5, '2' ); ?> >2<br>
+		<input type="radio" name="kiteworld_onsite_rating" value="3" <?php checked( $value5, '3' ); ?> >3<br>
+		<input type="radio" name="kiteworld_onsite_rating" value="4" <?php checked( $value5, '4' ); ?> >4<br>
+		<input type="radio" name="kiteworld_onsite_rating" value="5" <?php checked( $value5, '5' ); ?> >5<br>
+
+		<label for="kiteworld_activities_rating"><?php _e( "Choose Activities Rating:", 'choose_value' ); ?></label>
+		<br />
+		<input type="radio" name="kiteworld_activities_rating" value="1" <?php checked( $value6, '1' ); ?> >1<br>
+		<input type="radio" name="kiteworld_activities_rating" value="2" <?php checked( $value6, '2' ); ?> >2<br>
+		<input type="radio" name="kiteworld_activities_rating" value="3" <?php checked( $value6, '3' ); ?> >3<br>
+		<input type="radio" name="kiteworld_activities_rating" value="4" <?php checked( $value6, '4' ); ?> >4<br>
+		<input type="radio" name="kiteworld_activities_rating" value="5" <?php checked( $value6, '5' ); ?> >5<br>
+	</div>
 <?php
 }
 
@@ -905,8 +945,12 @@ function cd_meta_box_save( $post_id )
         update_post_meta( $post_id, 'kiteworld_practicalities', wp_kses( $_POST['kiteworld_practicalities'], $allowed_post ) );
         update_post_meta( $post_id, 'kiteworld_spare1', wp_kses( $_POST['kiteworld_spare1'], $allowed_post ) );
         update_post_meta( $post_id, 'kiteworld_spare2', wp_kses( $_POST['kiteworld_spare2'], $allowed_post ) );
-        update_post_meta( $post_id, 'kiteworld_condition_rating', wp_kses( $_POST['kiteworld_condition_rating'], $allowed_post ));
-        update_post_meta( $post_id, 'kiteworld_weather_rating', wp_kses( $_POST['kiteworld_weather_rating'], $allowed_post ));
+        update_post_meta( $post_id, 'kiteworld_wave_rating', wp_kses( $_POST['kiteworld_wave_rating'], $allowed_post ));
+        update_post_meta( $post_id, 'kiteworld_flat_rating', wp_kses( $_POST['kiteworld_flat_rating'], $allowed_post ));
+				update_post_meta( $post_id, 'kiteworld_beginner_rating', wp_kses( $_POST['kiteworld_beginner_rating'], $allowed_post ));
+				update_post_meta( $post_id, 'kiteworld_water_temp_rating', wp_kses( $_POST['kiteworld_water_temp_rating'], $allowed_post ));
+				update_post_meta( $post_id, 'kiteworld_onsite_rating', wp_kses( $_POST['kiteworld_onsite_rating'], $allowed_post ));
+				update_post_meta( $post_id, 'kiteworld_activities_rating', wp_kses( $_POST['kiteworld_activities_rating'], $allowed_post ));
 				update_post_meta( $post_id, 'Featured', wp_kses( $_POST['Featured'], $allowed_post ));
     }
 }
