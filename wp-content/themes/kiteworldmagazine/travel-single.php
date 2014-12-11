@@ -50,24 +50,46 @@
         </section>
         <nav class="navbar navbar-default">
             <ul class="nav navbar-nav travel-nav">
-                <li>The Lure</li>
-                <li>The Setup</li>
-                <li>Weather</li>
-                <li>Shops &amp; Schools</li>
-                <li>Accomodation</li>
-                <li>No Wind Activities</li>
-                <li>Practicalities</li>
+                <li><a href="#thelure">The Lure</a></li>
+                <li><a href="#thesetup">The Setup</a></li>
+                <li><a href="#weather">Weather</a></li>
+                <li><a href="#schools">Shops &amp; Schools</a></li>
+                <li><a href="#accomodation">Accomodation</a></li>
+                <li><a href="#nowind">No Wind Activities</a></li>
+                <li><a href="#practicalities">Practicalities</a></li>
 
             </ul>
         </nav>
 
     <div class="row">
-        <section class="initial col-sm-3">
+        <section class="initial col-sm-4">
             
                 <img src="wp-content/uploads/2014/12/glace-header.png">
+                <h2>Choice Rating</h2>
+
                 <?php
                  $kiteworld_wave = get_post_meta($post->ID, 'kiteworld_wave_rating', true);
                  echo $kiteworld_wave;
+                ?>
+                 <?php
+                 $kiteworld_flat = get_post_meta($post->ID, 'kiteworld_flat_rating', true);
+                 echo $kiteworld_flat ;
+                ?>
+                 <?php
+                 $kiteworld_beginner = get_post_meta($post->ID, 'kiteworld_beginner_rating', true);
+                 echo $kiteworld_beginner;
+                ?>
+                 <?php
+                 $kiteworld_water_temp = get_post_meta($post->ID, 'kiteworld_water_temp_rating', true);
+                 echo $kiteworld_water_temp;
+                ?>
+                 <?php
+                 $kiteworld_onsite = get_post_meta($post->ID, 'kiteworld_onsite_rating', true);
+                 echo $kiteworld_onsite;
+                ?>
+                 <?php
+                 $kiteworld_activities = get_post_meta($post->ID, 'kiteworld_activities_rating', true);
+                 echo $kiteworld_activities;
                 ?>
 
             <?php
@@ -86,7 +108,7 @@
             <?php the_content( __( 'Continue reading &raquo', 'kiteworldmagazine' ) ); ?>
           
         </section>
-        <section class="travel-content col-sm-13">
+        <section class="travel-content col-sm-12">
       
         <section class="lure">
             <?php

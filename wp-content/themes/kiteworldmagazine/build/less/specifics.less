@@ -487,7 +487,7 @@ li#menu-item-150 {
 			text-decoration: none;
 		}
 	}
-	ul {
+	> ul {
 		padding:1em;
 	}
 
@@ -638,6 +638,9 @@ aside.post-aside {
 	img {
 		.img-responsive;
 	}
+	> p {
+		margin:0px;
+	}
 }
 
 .home {
@@ -774,6 +777,9 @@ aside.post-aside {
 .travel-article  {
 	.travel-article-container {
 		border:1px solid @brand-info;
+		.travel-nav > li > a{
+			font-weight:normal;
+		}
 		.initial {
 			padding:20px 10px 20px 40px;
 		}
