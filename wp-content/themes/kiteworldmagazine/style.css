@@ -3715,11 +3715,17 @@ textareainput[type="email"] {
   background-color: #2d2d2d;
   color: #fff;
   letter-spacing: 0;
+  max-height: 1em;
+  display: block;
+  overflow: hidden;
 }
 .general-listing-page .post-block .post-content,
 .archive .post-block .post-content,
 .search .post-block .post-content {
   font-size: 12px;
+  max-height: 3em;
+  min-height: 3em;
+  overflow: hidden;
 }
 .general-listing-page h1.section-title,
 .archive h1.section-title,
@@ -3987,7 +3993,7 @@ li#menu-item-150 a:hover {
 .general-article h1 {
   font-size: 50px;
 }
-.general-article .post-content {
+.general-article > .post-content {
   max-width: 800px;
   margin: 0px auto;
 }
@@ -4227,12 +4233,33 @@ fieldset[disabled] .search-facility form input[type="submit"].active {
 .home a:hover {
   text-decoration: none;
 }
-.home .post-block.type-post .post-title {
+.home .post-block .post-title {
   font-family: 'bebas_neueregular', "OratorStd", Orator, "Andale Mono", AndaleMono, monospace;
   font-size: 20px;
   letter-spacing: 0;
 }
-.home .post-block.type-post .post-content {
+.home .post-block .post-content {
+  font-size: 12px;
+}
+.home .home-post-block .post-info-container {
+  color: #47bfab !important;
+  background-color: #FFF;
+  padding: 20px 0px;
+  font-size: 13px;
+}
+.home .home-post-block .post-info-container a {
+  color: #47bfab !important;
+}
+.home .home-post-block .post-info-container a:hover {
+  text-decoration: none!important;
+  color: #47bfab !important;
+}
+.home .home-post-block .post-title {
+  font-family: 'bebas_neueregular', "OratorStd", Orator, "Andale Mono", AndaleMono, monospace;
+  font-size: 20px;
+  letter-spacing: 0;
+}
+.home .home-post-block .post-content {
   font-size: 12px;
 }
 .home h1 {
@@ -4257,6 +4284,11 @@ fieldset[disabled] .search-facility form input[type="submit"].active {
 .home .travel .col-lg-5,
 .home .gear .col-lg-5 {
   width: 33.3%;
+}
+@media (max-width: 1199px) {
+  .home .travel.post-container article.post-block:nth-child(odd) {
+    clear: none;
+  }
 }
 .home .video .post-block .post-image {
   height: 300px!important;
@@ -4294,11 +4326,14 @@ fieldset[disabled] .search-facility form input[type="submit"].active {
 .gear-container .gear-form-overlay {
   position: relative;
 }
-.general-article .category-travel .post-content {
-  max-width: 100%;
+.travel-article .travel-article-container {
+  border: 1px solid #f5f5f5;
 }
-.general-article .category-travel .post-content section {
-  padding: 30px 0px;
+.travel-article .travel-article-container .initial {
+  padding: 20px 10px 20px 40px;
+}
+.travel-article .travel-article-container .travel-content {
+  padding: 20px 40px;
 }
 .fade {
   opacity: 0;

@@ -476,7 +476,7 @@ li#menu-item-150 {
 	h1 {
 		font-size:@font-size-h1;
 	}
-	.post-content {
+	>.post-content {
 		max-width: 800px;
 		margin:0px auto;
 
@@ -771,11 +771,14 @@ aside.post-aside {
 // TRAVEL POST
 //================================================================================================================
 
-.general-article .category-travel {
-	.post-content {
-		max-width: 100%;
-		section {
-			padding:30px 0px;
+.travel-article  {
+	.travel-article-container {
+		border:1px solid @brand-info;
+		.initial {
+			padding:20px 10px 20px 40px;
+		}
+		.travel-content {
+			padding:20px 40px;
 		}
 	}
 }

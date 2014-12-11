@@ -42,12 +42,30 @@
     </div>
 
     <div class="post-content">
+        <div class="travel-article-container">
         <section class="page-slider slider">
             <?php
             the_block( 'Slider or Search', 'type: editor' );
             ?>
         </section>
-        <section class="initial">test
+        <nav class="navbar navbar-default">
+            <ul class="nav navbar-nav travel-nav">
+                <li>The Lure</li>
+                <li>The Setup</li>
+                <li>Weather</li>
+                <li>Shops &amp; Schools</li>
+                <li>Accomodation</li>
+                <li>No Wind Activities</li>
+                <li>Practicalities</li>
+
+            </ul>
+        </nav>
+
+    <div class="row">
+        <section class="initial col-sm-3">
+            
+                <img src="wp-content/uploads/2014/12/glace-header.png">
+           
             <?php
 
             if ( '' != get_the_post_thumbnail() ) : ?>
@@ -59,14 +77,13 @@
                 <?php the_excerpt(); ?>
                 <a href="<?php the_permalink(); ?>"><?php _e( 'Read more &raquo;', 'kiteworldmagazine' ); ?></a>
 
-
-
-
             <?php else : ?>
 
             <?php the_content( __( 'Continue reading &raquo', 'kiteworldmagazine' ) ); ?>
+          
         </section>
-
+        <section class="travel-content col-sm-13">
+      
         <section class="lure">
             <?php
             $kiteworld_setup = get_post_meta($post->ID, 'kiteworld_lure', true);
@@ -98,6 +115,10 @@
                 echo $kiteworld_shops;
                 ?>
             </section>
+       
+    </section>
+    </div>
+</div>
 
 
         <?php endif; ?>

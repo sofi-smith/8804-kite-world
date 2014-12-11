@@ -11,37 +11,40 @@ get_header();
 ?>
 <div class="container-fluid">
 	<div class="row spacer">
-	<div class="main-content-container general-article col-md-12">
-	<section class="primary push-right" role="main">
+	<div class="main-content-container general-article travel-article col-md-12">
+		
+		<section class="primary" role="main">
 
-		<?php
-			if ( have_posts() ) : the_post();
 
-				get_template_part( 'travel-single' , get_post_type()); ?>
+			<?php
+				if ( have_posts() ) : the_post();
 
-				<aside class="post-aside">
+					get_template_part( 'travel-single' , get_post_type()); ?>
 
-					<div class="post-links">
-						<?php previous_post_link( '%link', __( '&laquo; Previous post', 'kiteworldmagazine' ) ) ?>
-						<?php next_post_link( '%link', __( 'Next post &raquo;', 'kiteworldmagazine' ) ); ?>
-					</div>
+					<aside class="post-aside">
 
-					<?php
-						if ( comments_open() || get_comments_number() > 0 ) :
-							comments_template( '', true );
-						endif;
-					?>
+						<div class="post-links">
+							<?php previous_post_link( '%link', __( '&laquo; Previous post', 'kiteworldmagazine' ) ) ?>
+							<?php next_post_link( '%link', __( 'Next post &raquo;', 'kiteworldmagazine' ) ); ?>
+						</div>
 
-				</aside><?php
+						<?php
+							if ( comments_open() || get_comments_number() > 0 ) :
+								comments_template( '', true );
+							endif;
+						?>
 
-			else :
+					</aside><?php
 
-				get_template_part( 'loop', 'empty' );
+				else :
 
-			endif;
-		?>
+					get_template_part( 'loop', 'empty' );
 
-	</section>
+				endif;
+			?>
+		
+		</section>
+	
 	</div>
 <!--SIDE BAR-->
             <div class="side-bar right-widget col-md-4">
