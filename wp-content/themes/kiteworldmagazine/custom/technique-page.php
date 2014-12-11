@@ -46,25 +46,31 @@ wp_nav_menu( array('menu' => 'technique-menu' ));
             </section>
 
             <section class="article-group page-content third">
-                <h1 class="section-title">Featured</h1>
+                <h1>Featured</h1>
                 <div class="post-container row">
-                  <?php
-                  $args = array(
-                    'posts_per_page' => 8,
-                    'post_type' => 'technique'
-                  );
-                  query_posts($args);
-                  if ( have_posts() ):
-                    while ( have_posts() ) :
-                      the_post();
-                      get_template_part( 'loop', get_post_type() );
-                    endwhile;
+                    <?php
+
+                    $args = array(
+                        'post_type' => array('news','gear','travel','feature','gallery','magazine','technique','video'),
+                        'posts_per_page' => 8,
+                        'meta_key' => 'featured',
+                    );
+                    query_posts($args);
+                    if ( have_posts() ):
+                        while ( have_posts() ) :
+                            the_post();
+                            get_template_part( 'loop', get_post_type() );
+                        endwhile;
                     else :
-                      get_template_part( 'loop', 'empty' );
+                        get_template_part( 'loop', 'empty' );
                     endif;
                     wp_reset_query();
                     ?>
                 </div>
+            </section>
+            <section class="page-content fifth row">
+
+            </section>
             </section>
             <section class="page-content fourth row">
 

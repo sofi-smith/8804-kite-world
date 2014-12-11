@@ -45,12 +45,12 @@
                 <div class="row">
 					<div class="logo-container col-xs-10">
 	                <a class="logo" href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>">
-						<img class="logo" src="wp-content/themes/kiteworldmagazine/images/kiteworld-logo.jpg" alt="Kiteworld Magazine">
+						<img class="logo" src="/wp-content/themes/kiteworldmagazine/images/kiteworld-logo.jpg" alt="Kiteworld Magazine">
 					</a>
 					</div>
 					<div class="header-promo-container col-xs-6">
 	 				<a href="<?php echo home_url(); ?>" title="<?php bloginfo( 'name' ); ?>">
-						<img class="promo-link" src="wp-content/themes/kiteworldmagazine/images/subscribe-img.jpg" alt="Kiteworld Magazine">
+						<img class="promo-link" src="/wp-content/themes/kiteworldmagazine/images/subscribe-img.jpg" alt="Kiteworld Magazine">
 					</a>
 					</div>
 				</div>

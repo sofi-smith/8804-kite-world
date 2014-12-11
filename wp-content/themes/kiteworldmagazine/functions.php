@@ -648,7 +648,7 @@ function kiteworld10_param_post_meta_box_cb( $post )
 {
   $values = get_post_custom( $post->ID );
   if ( isset( $values['kiteworld_lure'] ) ) {
-    $kiteworld1_meta_description_text = esc_attr( $values['kiteworld_lure'][0] );
+    $kiteworld1_meta_description_text = $values['kiteworld_lure'][0] ;
   }
   wp_nonce_field( 'meta_box_nonce', 'meta_box_nonce' );
 

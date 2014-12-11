@@ -141,6 +141,29 @@
                 echo $kiteworld_shops;
                 ?>
             </section>
+            <section class="article-group page-content">
+                <h1 class="section-title">Featured</h1>
+                <div class="post-container">
+                    <?php
+
+                    $args = array(
+                        'post_type' => array('travel'),
+                        'posts_per_page' => 8,
+                        'meta_key' => 'featured',
+                    );
+                    query_posts($args);
+                    if ( have_posts() ):
+                        while ( have_posts() ) :
+                            the_post();
+                            get_template_part( 'loop', get_post_type() );
+                        endwhile;
+                    else :
+                        get_template_part( 'loop', 'empty' );
+                    endif;
+                    wp_reset_query();
+                    ?>
+                </div>
+            </section>
        
     </section>
     </div>

@@ -51,25 +51,35 @@ wp_nav_menu( array('menu' => 'kiteshow-menu' ));
                 </div>
             </section>
             <section class="page-content third">
-              <div class="more-container">
-                <div class="more-btn">
-                  <a class="btn btn-primary-fill" title="Read More Articles">
-                    See more <span class="fa fa-angle-double-right"></span>
-                  </a>
-                </div>
-              </div>
-              <div class="post-container row">
 
+                <h1>Featured</h1>
+                <div class="post-container row">
+                    <?php
+
+                    $args = array(
+                        'post_type' => array('news','gear','travel','feature','gallery','magazine','technique','video'),
+                        'posts_per_page' => 8,
+                        'meta_key' => 'featured',
+                    );
+                    query_posts($args);
+                    if ( have_posts() ):
+                        while ( have_posts() ) :
+                            the_post();
+                            get_template_part( 'loop', get_post_type() );
+                        endwhile;
+                    else :
+                        get_template_part( 'loop', 'empty' );
+                    endif;
+                    wp_reset_query();
+                    ?>
                 </div>
             </section>
+            <section class="page-content fifth row">
+
+            </section>
+            </section>
             <section class="page-content forth">
-              <div class="more-container">
-                <div class="more-btn">
-                  <a class="btn btn-primary-fill" title="Read More Articles">
-                    See more <span class="fa fa-angle-double-right"></span>
-                  </a>
-                </div>
-              </div>
+
               <div class="post-container row">
 
               </div>

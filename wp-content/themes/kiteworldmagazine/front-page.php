@@ -140,7 +140,7 @@ get_header(); ?>
                             ?>
                 </div>
                 <div class="search-facility col-md-5">
-                <form action="/kite-world/?page_id=317" method="post" onsubmit="searchResult()" >
+                <form action="/kite-world.co.uk/?page_id=317" method="post" onsubmit="searchResult()" >
                     <div>
                         <h3>Location</h3>
                         <select name="continent" class="form-control" onchange="showCountry(this.options[this.selectedIndex].value)">
@@ -196,17 +196,14 @@ get_header(); ?>
                         <?php
                         $args = array(
                             'type'                     => 'post',
-                            //'child_of'                 => 6,
+
                             'parent'                   => 172,
                             'orderby'                  => 'name',
                             'order'                    => 'ASC',
                             'hide_empty'               => 1,
-                            //'hierarchical'             => 1,
-                            //'exclude'                  => '',
-                            //'include'                  => '',
-                            //'number'                   => '',
+
                             'taxonomy'                 => 'category',
-                            //'pad_counts'               => false
+
 
                         );
                         $categories = get_categories($args);
@@ -222,17 +219,13 @@ get_header(); ?>
                         <?php
                         $args = array(
                             'type'                     => 'post',
-                            //'child_of'                 => 6,
                             'parent'                   => 171,
                             'orderby'                  => 'name',
                             'order'                    => 'ASC',
                             'hide_empty'               => 1,
-                            //'hierarchical'             => 1,
-                            //'exclude'                  => '',
-                            //'include'                  => '',
-                            //'number'                   => '',
+
                             'taxonomy'                 => 'category',
-                            //'pad_counts'               => false
+
 
                         );
                         $categories = get_categories($args);
@@ -253,7 +246,7 @@ get_header(); ?>
             <section class="article-group travel post-container sixth row">
 
                 <?php
-                //$travel_query = new WP_Query( 'category_name=Travel&posts_per_page=3');
+
                     $args = array(
                             'posts_per_page' => 100,
                             'post_type' => 'travel'
@@ -303,12 +296,8 @@ get_header(); ?>
                                             'orderby'                  => 'name',
                                             'order'                    => 'ASC',
                                             'hide_empty'               => 0,
-                                            //'hierarchical'             => 1,
-                                            //'exclude'                  => '',
-                                            //'include'                  => '',
-                                            //'number'                   => '',
                                             'taxonomy'                 => 'category',
-                                            //'pad_counts'               => false
+
 
                                         );
                                         $categories = get_categories($args);
@@ -334,9 +323,9 @@ get_header(); ?>
 
                   <section class="article-group gear post-container row">
                     <?php
-                        // $gear_query = new WP_Query( 'category_name=Gear&posts_per_page=3');
+
                         $args = array(
-                            'posts_per_page' => 100,
+                            'posts_per_page' => 8,
                             'post_type' => 'gear'
                         );
                         query_posts($args);
@@ -361,12 +350,22 @@ get_header(); ?>
 									</a>
 								</div>
               </div>
-              <?php
-                    $my_id = 330;
-                    $post_id_1 = get_post($my_id);
-                    $title = $post_id_1->post_title;
-                    echo '<p class="section-blurb">' . $post_id_1->post_content . '</p>';
-                    ?>
+                <?php
+
+                $args = array(
+                    'posts_per_page' => 8,
+                    'category_name' => 'Readers Quotes'
+                );
+                query_posts($args);
+                if ( have_posts() ):
+                    while ( have_posts() ) : the_post();
+                        get_template_part( 'loop', get_post_type() );
+                    endwhile;
+                else :
+                    get_template_part( 'loop', 'empty' );
+                endif;
+                wp_reset_query();
+                ?>
             </section>
 
             <div class="block-out-grey">Don't miss an issue, subscribe to Kiteworld Magazine today <a class="btn btn-success">Subscribe</a></div>
@@ -382,7 +381,7 @@ get_header(); ?>
               </div>
                 <div class="row">
                     <?php
-                        // $video_query = new WP_Query( 'category_name=Video&posts_per_page=2');
+
                         $args = array(
                             'posts_per_page' => 2,
                             'post_type' => 'video'
@@ -418,9 +417,9 @@ get_header(); ?>
 
                 <div class="col-md-5">
                     <?php
-                        //$gallery_query = new WP_Query( 'category_name=Gallery&posts_per_page=2');
+
                         $args = array(
-                            'posts_per_page' => 100,
+                            'posts_per_page' => 8,
                             'post_type' => 'gallery'
                         );
                         query_posts($args);

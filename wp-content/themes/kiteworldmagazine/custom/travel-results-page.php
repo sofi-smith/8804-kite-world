@@ -16,7 +16,7 @@ get_header();
             <section class="top-box">
                 <div class="search-facility travel-search">
                    <h1 class="block-out">Search Travel Destinations</h1>
-                <form action="http://localhost:8804/?page_id=317" method="post" onsubmit="searchResult()">
+                <form action="http://kite-world.co.uk/?page_id=317" method="post" onsubmit="searchResult()">
                   <div class="row">
                     <div class="col-sm-5">
                         <h3>Location</h3>
@@ -185,17 +185,24 @@ get_header();
         <section class="article-group page-content third">
             <h1 class="section-title">Featured</h1>
             <div class="post-container">
-            <?php
-            $star_query=new WP_Query( 'category_name=Star');
-            if ( $star_query->have_posts() ):
-                while ( $star_query->have_posts() ) :
-                    $star_query->the_post();
-                    get_template_part( 'loop', get_post_type() );
-                endwhile;
-            else :
-                get_template_part( 'loop', 'empty' );
-            endif;
-            ?>
+                <?php
+
+                $args = array(
+                    'post_type' => array('news','gear','travel','feature','gallery','magazine','technique','video'),
+                    'posts_per_page' => 8,
+                    'meta_key' => 'featured',
+                );
+                query_posts($args);
+                if ( have_posts() ):
+                    while ( have_posts() ) :
+                        the_post();
+                        get_template_part( 'loop', get_post_type() );
+                    endwhile;
+                else :
+                    get_template_part( 'loop', 'empty' );
+                endif;
+                wp_reset_query();
+                ?>
             </div>
         </section>
         <section class="page-content fourth row">
