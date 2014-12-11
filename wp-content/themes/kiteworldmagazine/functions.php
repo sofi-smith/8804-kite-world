@@ -931,8 +931,11 @@ function cd_meta_box_save( $post_id )
         'h2' => array(),
         'h3' => array(),
         'p' => array(),
-				'<' => array(),
-				'>' => array()
+				'img' => array(
+					'src'=> array(),
+					'alt'=> array(),
+				),
+
     );
     // Make sure your data is set before trying to save it
     if( isset( $_POST['kiteworld_setup'] ) ) {

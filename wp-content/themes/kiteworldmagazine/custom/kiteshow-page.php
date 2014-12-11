@@ -7,7 +7,6 @@
  * @since Kite World Magazine 1.0
  */
 get_header();
-wp_nav_menu( array('menu' => 'kiteshow-menu' ));
 ?>
     <div class="container-fluid">
         <section class="page-slider slider row">

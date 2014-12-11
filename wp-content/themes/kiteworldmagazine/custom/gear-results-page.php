@@ -16,7 +16,7 @@ get_header();
             <section class="top-box">
                  <div class="search-facility gear-search">
                   <h1 class="block-out">Filter Gear Reviews</h1>
-                  <form class="" action="http://localhost:8804/?page_id=334" method="post">
+                  <form class="" action="http://kite-world.co.uk/?page_id=334" method="post">
                     <div class="form-items">
                     <select name="gear-type" class="col-sm-16 form-control">
                       <option value=""><?php echo esc_attr(__('All types of equipment')); ?></option>
@@ -170,9 +170,24 @@ get_header();
         <section class="article-group page-content third">
             <h1 class="section-title">Featured</h1>
             <div class="post-container">
-            <?php
+              <?php
 
-            ?>
+              $args = array(
+                'post_type' => array('news','gear','travel','feature','gallery','magazine','technique','video'),
+                'posts_per_page' => 8,
+                'meta_key' => 'featured',
+              );
+              query_posts($args);
+              if ( have_posts() ):
+                while ( have_posts() ) :
+                  the_post();
+                  get_template_part( 'loop', get_post_type() );
+                endwhile;
+                else :
+                  get_template_part( 'loop', 'empty' );
+                endif;
+                wp_reset_query();
+                ?>
             </div>
         </section>
         <section class="page-content fourth row">

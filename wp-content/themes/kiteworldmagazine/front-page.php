@@ -193,48 +193,56 @@ get_header(); ?>
                     </div>
                     <fieldset>
                         <h3>Style</h3>
-                        <?php
-                        $args = array(
-                            'type'                     => 'post',
+												<?php
+												$args = array(
+													'type'                     => 'travel',
+													//'child_of'                 => 6,
+													'parent'                   => 172,
+													'orderby'                  => 'name',
+													'order'                    => 'ASC',
+													'hide_empty'               => 0,
+													//'hierarchical'             => 1,
+													//'exclude'                  => '',
+													//'include'                  => '',
+													//'number'                   => '',
+													'taxonomy'                 => 'travel_name',
+													//'pad_counts'               => false
 
-                            'parent'                   => 172,
-                            'orderby'                  => 'name',
-                            'order'                    => 'ASC',
-                            'hide_empty'               => 1,
-
-                            'taxonomy'                 => 'category',
-
-
-                        );
-                        $categories = get_categories($args);
-                        foreach ($categories as $category) {
-                            $option = '<input type="checkbox" name="style[]" value="'.$category->cat_ID.'"> '.$category->cat_name.'</br>';
-                            echo $option;
-                        }
-                        wp_reset_query();
-                        ?>
+												);
+												$categories = get_categories($args);
+												foreach ($categories as $category) {
+													$option = '<input type="checkbox" name="style[]" value="'.$category->cat_ID.'"> '.$category->cat_name.'</br>';
+													echo $option;
+												}
+												wp_reset_query();
+												wp_reset_postdata();
+												?>
                     </fieldset>
                     <fieldset>
                         <h3>Season</h3>
-                        <?php
-                        $args = array(
-                            'type'                     => 'post',
-                            'parent'                   => 171,
-                            'orderby'                  => 'name',
-                            'order'                    => 'ASC',
-                            'hide_empty'               => 1,
+												<?php
+												$args = array(
+													'type'                     => 'travel',
+													'parent'                   =>  171,
+													'orderby'                  => 'name',
+													'order'                    => 'ASC',
+													'hide_empty'               => 0,
+													//'hierarchical'             => 1,
+													//'exclude'                  => '',
+													//'include'                  => '',
+													//'number'                   => '',
+													'taxonomy'                 => 'travel_name',
+													//'pad_counts'               => false
 
-                            'taxonomy'                 => 'category',
-
-
-                        );
-                        $categories = get_categories($args);
-                        foreach ($categories as $category) {
-                            $option = '<input type="checkbox" name="season[]" value="'.$category->cat_ID.'"> '.$category->cat_name.'</br>';
-                            echo $option;
-                        }
-                        wp_reset_query();
-                        ?>
+												);
+												$categories = get_categories($args);
+												foreach ($categories as $category) {
+													$option = '<input type="checkbox" name="season[]" value="'.$category->cat_ID.'"> '.$category->cat_name.'</br>';
+													echo $option;
+												}
+												wp_reset_query();
+												wp_reset_postdata();
+												?>
                     </fieldset>
                     <fieldset>
                         <button name="submit" class="btn btn-primary-fill">Search</button>
@@ -284,34 +292,43 @@ get_header(); ?>
                             ?>
                             <div class="gear-form-overlay">
 
-                                <form action="./?page_id=334" method="post">
+															<form class="" action="http://kite-world.co.uk/?page_id=334" method="post">
 
                                     <fieldset>
                                         <h3>Choose your weapon &hellip;</h3>
-
-                                        <?php
-                                        $args = array(
-                                            'type'                     => 'post',
-                                            'parent'                 => 163,
-                                            'orderby'                  => 'name',
-                                            'order'                    => 'ASC',
-                                            'hide_empty'               => 0,
-                                            'taxonomy'                 => 'category',
-
-
-                                        );
-                                        $categories = get_categories($args);
-                                        foreach ($categories as $category) {
-                                            $option = '<input type="checkbox" name="level[]" value="'.$category->cat_ID.'" style="dispay:inlie-block"> '.$category->cat_name.'</br>';
-                                            echo $option;
-                                        }
-                                        wp_reset_query();
-                                        ?>
+																				<select name="gear-type" class="col-sm-16 form-control">
+																					<option value=""><?php echo esc_attr(__('All types of equipment')); ?></option>
+																				<?php
+																				$args = array(
+																					'type'                     => 'gear',
+																					//'child_of'                 => 5,
+																					'parent'                   => 163,
+																					'orderby'                  => 'name',
+																					'order'                    => 'ASC',
+																					'hide_empty'               => 0,
+																					//'hierarchical'             => 1,
+																					//'exclude'                  => '',
+																					//'include'                  => '',
+																					//'number'                   => '',
+																					'taxonomy'                 => 'gear_name',
+																					//'pad_counts'               => false
+																				);
+																				$categories = get_categories($args);
+																				foreach ($categories as $category) {
+																					$option = '<option value="'.$category->cat_ID.'">';
+																					$option .= $category->cat_name;
+																					$option .= '</option>';
+																					echo $option;
+																				}
+																				wp_reset_query();
+																				wp_reset_postdata();
+																				?>
+																			</select>
                                     </fieldset>
+																		<fieldset class="btn-bar">
+																			<input type="submit" name="search" value="Select &raquo;" class="btn btn-primary-fill" />
+																		</fieldset>
 
-                                    <fieldset>
-                                        <button name="submit">Select &raquo;</button>
-                                    </fieldset>
 
                                 </form>
                             </div>

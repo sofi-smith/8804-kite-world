@@ -16,7 +16,7 @@ get_header(); ?>
 
         <div class="search-facility gear-search">
           <h1 class="block-out">Filter Gear Reviews</h1>
-          <form class="" action="http://localhost:8804/?page_id=334" method="post">
+          <form class="" action="http://kite-world.co.uk/?page_id=334" method="post">
             <div class="form-items">
                 <select name="gear-type" class="col-sm-16 form-control">
                     <option value=""><?php echo esc_attr(__('All types of equipment')); ?></option>

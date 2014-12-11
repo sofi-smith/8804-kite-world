@@ -23,7 +23,7 @@
 		                'container_class'   => 'footer-links',
 		        		'container_id'      => 'footer-nav',
 		                'menu_class'        => 'footer-nav',
-					
+
 						'theme_location' => 'main-menu',
 						'fallback_cb' => '__return_false',
 								)
@@ -44,11 +44,11 @@
 								</ul>
 							</div>
 							<div class="footer-group col-sm-3">
-								
+
 							</div>
 							<div class="footer-group footer-details col-sm-4">
 								<div class="logo-footer">
-									<img src="wp-content/themes/kiteworldmagazine/images/kiteworld-logo-green.png" alt="Kiteworld Magazine">
+									<img src="/wp-content/themes/kiteworldmagazine/images/kiteworld-logo-green.png" alt="Kiteworld Magazine">
 
 								</div>
 								<address>
@@ -74,7 +74,7 @@
 									</li>
 								</ul>
 							</div>
-							
+
 
 						</div>
 					</div>
@@ -88,34 +88,34 @@
 		<?php wp_footer(); ?>
 
 				<script>
-		jQuery(document).ready(function() {  
-var stickyNavTop = jQuery('.nav-trace').offset().top;  
-  
-var stickyNav = function(){  
-var scrollTop = jQuery(window).scrollTop();  
-       
-if (scrollTop > stickyNavTop) {   
-    jQuery('.nav-trace').addClass('sticky');  
-} else {  
-    jQuery('.nav-trace').removeClass('sticky');   
-}  
-};  
-  
-stickyNav();  
-  
-jQuery(window).scroll(function() {  
-    stickyNav();  
-});  
-});  
+		jQuery(document).ready(function() {
+var stickyNavTop = jQuery('.nav-trace').offset().top;
+
+var stickyNav = function(){
+var scrollTop = jQuery(window).scrollTop();
+
+if (scrollTop > stickyNavTop) {
+    jQuery('.nav-trace').addClass('sticky');
+} else {
+    jQuery('.nav-trace').removeClass('sticky');
+}
+};
+
+stickyNav();
+
+jQuery(window).scroll(function() {
+    stickyNav();
+});
+});
 		</script>
 
-		<script type="text/javascript">
-(function (d, t) {
-   var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
-   pp.src = 'https://app.pageproofer.com/overlay/js/885/531';
-   pp.type = 'text/javascript';
-   s.parentNode.insertBefore(pp, s);
-})(document, 'script');
-</script>
+		<script type='text/javascript'>
+		(function (d, t) {
+			var pp = d.createElement(t), s = d.getElementsByTagName(t)[0];
+			pp.src = 'https://app.pageproofer.com/overlay/js/853/531';
+			pp.type = 'text/javascript';
+			s.parentNode.insertBefore(pp, s);
+		})(document, 'script');
+		</script>
 	</body>
 </html>

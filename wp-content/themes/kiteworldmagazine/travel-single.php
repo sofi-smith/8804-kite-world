@@ -50,47 +50,65 @@
         </section>
         <nav class="navbar navbar-default">
             <ul class="nav navbar-nav travel-nav">
-                <li><a href="#thelure">The Lure</a></li>
-                <li><a href="#thesetup">The Setup</a></li>
-                <li><a href="#weather">Weather</a></li>
-                <li><a href="#schools">Shops &amp; Schools</a></li>
-                <li><a href="#accomodation">Accomodation</a></li>
-                <li><a href="#nowind">No Wind Activities</a></li>
-                <li><a href="#practicalities">Practicalities</a></li>
+                <li class="lure active-travel"><a href="#thelure">The Lure</a></li>
+                <li class="setup"><a href="#thesetup">The Setup</a></li>
+                <li class="weather"><a href="#weather">Weather</a></li>
+                <li class="shops"><a href="#schools">Shops &amp; Schools</a></li>
+                <li class="accommodation"><a href="#accomodation">Accomodation</a></li>
+                <li class="nowind"><a href="#nowind">No Wind Activities</a></li>
+                <li class="practicalities"><a href="#practicalities">Practicalities</a></li>
 
             </ul>
         </nav>
 
+
+
     <div class="row">
         <section class="initial col-sm-4">
-            
-                <img src="wp-content/uploads/2014/12/glace-header.png">
-                <h2>Choice Rating</h2>
 
-                <?php
-                 $kiteworld_wave = get_post_meta($post->ID, 'kiteworld_wave_rating', true);
-                 echo $kiteworld_wave;
-                ?>
-                 <?php
-                 $kiteworld_flat = get_post_meta($post->ID, 'kiteworld_flat_rating', true);
-                 echo $kiteworld_flat ;
-                ?>
-                 <?php
-                 $kiteworld_beginner = get_post_meta($post->ID, 'kiteworld_beginner_rating', true);
-                 echo $kiteworld_beginner;
-                ?>
-                 <?php
-                 $kiteworld_water_temp = get_post_meta($post->ID, 'kiteworld_water_temp_rating', true);
-                 echo $kiteworld_water_temp;
-                ?>
-                 <?php
-                 $kiteworld_onsite = get_post_meta($post->ID, 'kiteworld_onsite_rating', true);
-                 echo $kiteworld_onsite;
-                ?>
-                 <?php
-                 $kiteworld_activities = get_post_meta($post->ID, 'kiteworld_activities_rating', true);
-                 echo $kiteworld_activities;
-                ?>
+                <img src="/wp-content/uploads/2014/12/glace-header.png">
+                <h2>Choice Rating</h2>
+                <ul class="choice-rating">
+                    <li class="wave">
+                        <?php
+                         $kiteworld_wave = get_post_meta($post->ID, 'kiteworld_wave_rating', true);
+                         echo $kiteworld_wave;
+                        ?>
+                    </li>
+                    <li class="flat">
+                         <?php
+                         $kiteworld_flat = get_post_meta($post->ID, 'kiteworld_flat_rating', true);
+                         echo $kiteworld_flat ;
+                        ?>
+                    </li>
+                    <li class="beginner">
+                         <?php
+                         $kiteworld_beginner = get_post_meta($post->ID, 'kiteworld_beginner_rating', true);
+                         echo $kiteworld_beginner;
+                        ?>
+                    </li>
+                    <li class="water-temp">
+                         <?php
+                         $kiteworld_water_temp = get_post_meta($post->ID, 'kiteworld_water_temp_rating', true);
+                         echo $kiteworld_water_temp;
+                        ?>
+                    </li>
+                    <li class="onsite">
+                         <?php
+                         $kiteworld_onsite = get_post_meta($post->ID, 'kiteworld_onsite_rating', true);
+                         echo $kiteworld_onsite;
+                        ?>
+                    </li>
+                    <li class="activities">
+                         <?php
+                         $kiteworld_activities = get_post_meta($post->ID, 'kiteworld_activities_rating', true);
+                         echo $kiteworld_activities;
+                        ?>
+                    </li>
+                </ul>
+
+
+
 
             <?php
 
@@ -106,68 +124,81 @@
             <?php else : ?>
 
             <?php the_content( __( 'Continue reading &raquo', 'kiteworldmagazine' ) ); ?>
-          
+
         </section>
         <section class="travel-content col-sm-12">
-      
-        <section class="lure">
+
+        <section class="travel-section lure">
             <?php
-            $kiteworld_setup = get_post_meta($post->ID, 'kiteworld_lure', true);
-            echo $kiteworld_setup;
+            $kiteworld_lure = get_post_meta($post->ID, 'kiteworld_lure', true);
+            echo do_shortcode($kiteworld_lure);
             ?>
         </section>
 
-            <section class="setup">
+            <section class="travel-section setup">
                 <?php
                 $kiteworld_setup = get_post_meta($post->ID, 'kiteworld_setup', true);
-                echo $kiteworld_setup;
+                echo do_shortcode($kiteworld_setup);
                 ?>
             </section>
-            <section class="weather">
+            <section class="travel-section weather">
                 <?php
                 $kiteworld_weather = get_post_meta($post->ID, 'kiteworld_weather', true);
-                echo $kiteworld_weather;
+                echo do_shortcode($kiteworld_weather);
                 ?>
             </section>
-            <section class="accommodation">
+            <section class="travel-section accommodation">
                 <?php
                 $kiteworld_accommodation = get_post_meta($post->ID, 'kiteworld_accommodation', true);
-                echo $kiteworld_accommodation;
+                echo do_shortcode($kiteworld_accommodation);
                 ?>
             </section>
-            <section class="shops">
+            <section class="travel-section shops">
                 <?php
                 $kiteworld_shops = get_post_meta($post->ID, 'kiteworld_shops', true);
-                echo $kiteworld_shops;
+                echo do_shortcode($kiteworld_shops);
                 ?>
             </section>
-            <section class="article-group page-content">
-                <h1 class="section-title">Featured</h1>
-                <div class="post-container">
-                    <?php
-
-                    $args = array(
-                        'post_type' => array('travel'),
-                        'posts_per_page' => 8,
-                        'meta_key' => 'featured',
-                    );
-                    query_posts($args);
-                    if ( have_posts() ):
-                        while ( have_posts() ) :
-                            the_post();
-                            get_template_part( 'loop', get_post_type() );
-                        endwhile;
-                    else :
-                        get_template_part( 'loop', 'empty' );
-                    endif;
-                    wp_reset_query();
-                    ?>
-                </div>
+            <section class="travel-section nowind">
+                <?php
+                $kiteworld_activities = get_post_meta($post->ID, 'kiteworld_activities', true);
+                echo do_shortcode($kiteworld_activities);
+                ?>
             </section>
-       
+              <section class="travel-section practicalities">
+                <?php
+                $kiteworld_practicalities = get_post_meta($post->ID, 'kiteworld_practicalities', true);
+                echo do_shortcode($kiteworld_practicalities);
+                ?>
+            </section>
+
     </section>
     </div>
 </div>
+
+<section class="article-group page-content">
+    <h1 class="section-title">Featured</h1>
+    <div class="post-container row">
+        <?php
+
+        $args = array(
+            'post_type' => array('travel'),
+            'posts_per_page' => 8,
+            'meta_key' => 'featured',
+        );
+        query_posts($args);
+        if ( have_posts() ):
+            while ( have_posts() ) :
+                the_post();
+                get_template_part( 'loop', get_post_type() );
+            endwhile;
+        else :
+            get_template_part( 'loop', 'empty' );
+        endif;
+        wp_reset_query();
+        ?>
+    </div>
+</section>
 
 
         <?php endif; ?>
