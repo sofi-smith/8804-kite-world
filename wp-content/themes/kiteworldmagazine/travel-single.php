@@ -65,7 +65,11 @@
         <section class="initial col-sm-3">
             
                 <img src="wp-content/uploads/2014/12/glace-header.png">
-           
+                <?php
+                 $kiteworld_wave = get_post_meta($post->ID, 'kiteworld_wave_rating', true);
+                 echo $kiteworld_wave;
+                ?>
+
             <?php
 
             if ( '' != get_the_post_thumbnail() ) : ?>
