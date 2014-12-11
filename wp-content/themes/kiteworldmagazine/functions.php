@@ -642,6 +642,7 @@ function kiteworld_param_meta_box_add() {
     add_meta_box( 'kiteworld_param_post7', 'Spare 1', 'kiteworld7_param_post_meta_box_cb', 'travel', 'normal', 'high' );
     add_meta_box( 'kiteworld_param_post8', 'Spare 2', 'kiteworld8_param_post_meta_box_cb', 'travel', 'normal', 'high' );
     add_meta_box( 'kiteworld_param_post9', 'Location Ratings', 'kiteworld9_param_post_meta_box_cb', 'travel', 'normal', 'high' );
+		add_meta_box( 'kiteworld_param_post11', 'Featured Item', 'kiteworld11_param_post_meta_box_cb', 'travel', 'normal', 'high' );
 }
 function kiteworld10_param_post_meta_box_cb( $post )
 {
@@ -667,7 +668,7 @@ function kiteworld1_param_post_meta_box_cb( $post )
 {
     $values = get_post_custom( $post->ID );
     if ( isset( $values['kiteworld_setup'] ) ) {
-        $kiteworld1_meta_description_text = esc_attr( $values['kiteworld_setup'][0] );
+        $kiteworld1_meta_description_text = $values['kiteworld_setup'][0] ;
     }
     wp_nonce_field( 'meta_box_nonce', 'meta_box_nonce' );
 
@@ -678,7 +679,7 @@ function kiteworld1_param_post_meta_box_cb( $post )
             $args = array("textarea_rows" => 5, "textarea_name" => "kiteworld_setup", "editor_class" => "post_editor_custom");
             wp_editor($kiteworld1_meta_description_text, "my_editor_1", $args);
             ?>
-        </tr>
+        </tr
     </table>
 
 <?php
@@ -689,7 +690,7 @@ function kiteworld2_param_post_meta_box_cb( $post )
 {
     $values = get_post_custom( $post->ID );
     if ( isset( $values['kiteworld_weather'] ) ) {
-        $kiteworld2_meta_description_text = esc_attr( $values['kiteworld_weather'][0] );
+        $kiteworld2_meta_description_text = $values['kiteworld_weather'][0] ;
     }
 
     ?>
@@ -710,7 +711,7 @@ function kiteworld3_param_post_meta_box_cb( $post )
 {
     $values = get_post_custom( $post->ID );
     if ( isset( $values['kiteworld_shops'] ) ) {
-        $kiteworld3_meta_description_text = esc_attr( $values['kiteworld_shops'][0] );
+        $kiteworld3_meta_description_text = $values['kiteworld_shops'][0] ;
     }
 
     ?>
@@ -732,7 +733,7 @@ function kiteworld4_param_post_meta_box_cb( $post )
 {
     $values = get_post_custom( $post->ID );
     if ( isset( $values['kiteworld_accommodation'] ) ) {
-        $kiteworld4_meta_description_text = esc_attr( $values['kiteworld_accommodation'][0] );
+        $kiteworld4_meta_description_text = $values['kiteworld_accommodation'][0] ;
     }
 
     ?>
@@ -754,7 +755,7 @@ function kiteworld5_param_post_meta_box_cb( $post )
 {
     $values = get_post_custom( $post->ID );
     if ( isset( $values['kiteworld_activities'] ) ) {
-        $kiteworld5_meta_description_text = esc_attr( $values['kiteworld_activities'][0] );
+        $kiteworld5_meta_description_text =  $values['kiteworld_activities'][0] ;
     }
 
     ?>
@@ -775,7 +776,7 @@ function kiteworld6_param_post_meta_box_cb( $post )
 {
     $values = get_post_custom( $post->ID );
     if ( isset( $values['kiteworld_practicalities'] ) ) {
-        $kiteworld6_meta_description_text = esc_attr( $values['kiteworld_practicalities'][0] );
+        $kiteworld6_meta_description_text =  $values['kiteworld_practicalities'][0] ;
     }
 
     ?>
@@ -797,7 +798,7 @@ function kiteworld7_param_post_meta_box_cb( $post )
 {
     $values = get_post_custom( $post->ID );
     if ( isset( $values['kiteworld_spare1'] ) ) {
-        $kiteworld7_meta_description_text = esc_attr( $values['kiteworld_spare1'][0] );
+        $kiteworld7_meta_description_text = $values['kiteworld_spare1'][0] ;
     }
 
     ?>
@@ -819,7 +820,7 @@ function kiteworld8_param_post_meta_box_cb( $post )
 {
     $values = get_post_custom( $post->ID );
     if ( isset( $values['kiteworld_spare2'] ) ) {
-        $kiteworld8_meta_description_text = esc_attr( $values['kiteworld_spare2'][0] );
+        $kiteworld8_meta_description_text = $values['kiteworld_spare2'][0] ;
     }
 
     ?>
@@ -858,9 +859,14 @@ function kiteworld9_param_post_meta_box_cb( $post ) {
     <input type="radio" name="kiteworld_weather_rating" value="4" <?php checked( $value2, '4' ); ?> >4<br>
     <input type="radio" name="kiteworld_weather_rating" value="5" <?php checked( $value2, '5' ); ?> >5<br>
 <?php
-
 }
 
+function kiteworld11_param_post_meta_box_cb( $post ) {
+	$value1 = get_post_meta( $post->ID, 'Featured', true );
+	?>
+	<input type="checkbox" name="Featured" value="Yes" <?php checked( $value1, 'Yes' ); ?> >Featured Item<br>
+	<?php
+}
 
 add_action( 'save_post', 'cd_meta_box_save' );
 function cd_meta_box_save( $post_id )
@@ -884,7 +890,9 @@ function cd_meta_box_save( $post_id )
         'h1' => array(),
         'h2' => array(),
         'h3' => array(),
-        'p' => array()
+        'p' => array(),
+				'<' => array(),
+				'>' => array()
     );
     // Make sure your data is set before trying to save it
     if( isset( $_POST['kiteworld_setup'] ) ) {
@@ -899,6 +907,7 @@ function cd_meta_box_save( $post_id )
         update_post_meta( $post_id, 'kiteworld_spare2', wp_kses( $_POST['kiteworld_spare2'], $allowed_post ) );
         update_post_meta( $post_id, 'kiteworld_condition_rating', wp_kses( $_POST['kiteworld_condition_rating'], $allowed_post ));
         update_post_meta( $post_id, 'kiteworld_weather_rating', wp_kses( $_POST['kiteworld_weather_rating'], $allowed_post ));
+				update_post_meta( $post_id, 'Featured', wp_kses( $_POST['Featured'], $allowed_post ));
     }
 }
 function jptweak_remove_share() {
