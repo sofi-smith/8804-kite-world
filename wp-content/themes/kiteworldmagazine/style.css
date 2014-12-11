@@ -1,6 +1,6 @@
 /*
-Theme Name: Kite World Magazine
-Theme URI: http://kiteworldmagazine.com/
+Theme Name: The Flour Pot Bakery
+Theme URI: http://theflourpot.com/
 Author: Paul Hayler
 Author URI: http://neptik.com/
 Description: Another fantastic responsive theme by Team Neptik
@@ -2571,7 +2571,7 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 49px;
+  height: 43px;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.7;
@@ -2617,7 +2617,7 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
-  line-height: 49px;
+  line-height: 43px;
   line-height: 1.7 \0;
 }
 input[type="date"].input-sm,
@@ -2742,7 +2742,7 @@ select[multiple].input-lg {
   position: relative;
 }
 .has-feedback .form-control {
-  padding-right: 61.25px;
+  padding-right: 53.75px;
 }
 .form-control-feedback {
   position: absolute;
@@ -2750,9 +2750,9 @@ select[multiple].input-lg {
   right: 0;
   z-index: 2;
   display: block;
-  width: 49px;
-  height: 49px;
-  line-height: 49px;
+  width: 43px;
+  height: 43px;
+  line-height: 43px;
   text-align: center;
 }
 .input-lg + .form-control-feedback {
@@ -3513,7 +3513,7 @@ img.promo-link {
 form.searchform input[type="text"] {
   display: block;
   width: 100%;
-  height: 49px;
+  height: 43px;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.7;
@@ -3656,7 +3656,7 @@ input[type="text"],
 input[type="email"] {
   display: block;
   width: 100%;
-  height: 49px;
+  height: 43px;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.7;
@@ -3709,7 +3709,8 @@ textareainput[type="email"] {
 }
 .general-listing-page .post-block .post-title,
 .archive .post-block .post-title,
-.search .post-block .post-title {
+.search .post-block .post-title,
+.travel-article .post-block .post-title {
   font-family: 'bebas_neueregular', "OratorStd", Orator, "Andale Mono", AndaleMono, monospace;
   font-size: 20px;
   background-color: #2d2d2d;
@@ -3721,7 +3722,8 @@ textareainput[type="email"] {
 }
 .general-listing-page .post-block .post-content,
 .archive .post-block .post-content,
-.search .post-block .post-content {
+.search .post-block .post-content,
+.travel-article .post-block .post-content {
   font-size: 12px;
   max-height: 3em;
   min-height: 3em;
@@ -3729,13 +3731,15 @@ textareainput[type="email"] {
 }
 .general-listing-page h1.section-title,
 .archive h1.section-title,
-.search h1.section-title {
+.search h1.section-title,
+.travel-article h1.section-title {
   margin-bottom: 5px;
   text-align: center;
 }
 .general-listing-page h1.section-title .btn,
 .archive h1.section-title .btn,
-.search h1.section-title .btn {
+.search h1.section-title .btn,
+.travel-article h1.section-title .btn {
   float: right;
 }
 .more-container {
@@ -3981,6 +3985,14 @@ li#menu-item-150 a:hover {
   text-transform: uppercase;
   color: #b4b4b4;
 }
+.general-article > section > article > .post-content {
+  max-width: 800px;
+  margin: 0px auto;
+}
+.travel-article > section > article > .post-content {
+  max-width: 100%;
+  margin: 0px auto;
+}
 .general-article .attachment-post-thumbnail {
   display: none;
 }
@@ -3992,10 +4004,6 @@ li#menu-item-150 a:hover {
 }
 .general-article h1 {
   font-size: 50px;
-}
-.general-article > .post-content {
-  max-width: 800px;
-  margin: 0px auto;
 }
 .general-article a {
   font-weight: bold;
@@ -4245,13 +4253,9 @@ fieldset[disabled] .search-facility form input[type="submit"].active {
   font-size: 12px;
 }
 .home .home-post-block .post-info-container {
-  color: #47bfab !important;
   background-color: #FFF;
   padding: 20px 0px;
   font-size: 13px;
-}
-.home .home-post-block .post-info-container a {
-  color: #47bfab !important;
 }
 .home .home-post-block .post-info-container a:hover {
   text-decoration: none!important;
@@ -4259,11 +4263,24 @@ fieldset[disabled] .search-facility form input[type="submit"].active {
 }
 .home .home-post-block .post-title {
   font-family: 'bebas_neueregular', "OratorStd", Orator, "Andale Mono", AndaleMono, monospace;
-  font-size: 20px;
+  font-size: 25px;
   letter-spacing: 0;
+  color: #47bfab;
 }
 .home .home-post-block .post-content {
   font-size: 12px;
+  color: #2d2d2d;
+}
+.home .home-post-block {
+  padding: 10px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.home .home-post-block:hover {
+  opacity: 0.7;
 }
 .home h1 {
   margin-bottom: 5px;
@@ -4293,8 +4310,29 @@ fieldset[disabled] .search-facility form input[type="submit"].active {
     clear: none;
   }
 }
-.home .video .post-block .post-image {
+.home .video .post-image {
+  position: relative;
+}
+.home .video .play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 56px;
+  margin: -27px 0 0 -25px;
+  z-index: 10;
+}
+.home .video .play .fa {
+  color: #FFF;
+}
+.home .video .home-post-block .post-image {
   height: 300px!important;
+}
+.home .home-featured .ad-area-container {
+  padding: 0px 16px 0px 0px;
+}
+.home .home-featured .ad-area {
+  margin-bottom: 16px;
 }
 @media (max-width: 992px) {
   .home .home .travel .col-lg-5,
@@ -4331,6 +4369,7 @@ fieldset[disabled] .search-facility form input[type="submit"].active {
 }
 .travel-article .travel-article-container {
   border: 1px solid #f5f5f5;
+  margin-bottom: 30px;
 }
 .travel-article .travel-article-container .travel-nav > li > a {
   font-weight: normal;
@@ -4338,8 +4377,51 @@ fieldset[disabled] .search-facility form input[type="submit"].active {
 .travel-article .travel-article-container .initial {
   padding: 20px 10px 20px 40px;
 }
+.travel-article .travel-article-container .initial h2 {
+  font-family: 'bebas_neueregular', "OratorStd", Orator, "Andale Mono", AndaleMono, monospace;
+  margin-bottom: 10px;
+}
 .travel-article .travel-article-container .travel-content {
   padding: 20px 40px;
+}
+.travel-article .travel-article-container .travel-content h3:before {
+  content: "\f101";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  padding-right: 10px;
+  color: #47bfab;
+}
+.travel-article .travel-article-container ul.choice-rating {
+  padding: 0px;
+}
+.travel-article .travel-article-container ul.choice-rating > li {
+  list-style: none;
+  line-height: 2.5em;
+  padding-left: 60px;
+  font-family: 'bebas_neueregular', "OratorStd", Orator, "Andale Mono", AndaleMono, monospace;
+  font-size: 25px;
+  width: 48%;
+  display: inline-block;
+}
+.travel-article .travel-article-container ul.choice-rating li.wave {
+  background: url("../../../../wp-content/uploads/2014/12/wave-icon.png") no-repeat left center;
+}
+.travel-article .travel-article-container ul.choice-rating li.flat {
+  background: url("../../../../wp-content/uploads/2014/12/flat-icon.png") no-repeat left center;
+}
+.travel-article .travel-article-container ul.choice-rating li.water-temp {
+  background: url("../../../../wp-content/uploads/2014/12/watertemp.png") no-repeat left center;
+}
+.travel-article .travel-article-container ul.choice-rating li.beginner {
+  background: url("../../../../wp-content/uploads/2014/12/beginner-icon.png") no-repeat left center;
+}
+.travel-article .travel-article-container ul.choice-rating li.onsite {
+  background: url("../../../../wp-content/uploads/2014/12/onsite-icon.png") no-repeat left center;
+}
+.travel-article .travel-article-container ul.choice-rating li.activities {
+  background: url("../../../../wp-content/uploads/2014/12/activities-icon.png") no-repeat left center;
 }
 .fade {
   opacity: 0;
@@ -5273,8 +5355,8 @@ ul.menu li a {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 0.5px;
-  margin-bottom: 0.5px;
+  margin-top: 3.5px;
+  margin-bottom: 3.5px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -5353,8 +5435,8 @@ ul.menu li a {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 0.5px;
-  margin-bottom: 0.5px;
+  margin-top: 3.5px;
+  margin-bottom: 3.5px;
 }
 .navbar-btn.btn-sm {
   margin-top: 10px;

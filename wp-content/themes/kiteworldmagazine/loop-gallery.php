@@ -8,7 +8,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('post-block col-sm-16 col-lg-16'); ?> >
+<article id="post-<?php the_ID(); ?>" <?php post_class('post-block col-sm-8 col-lg-4'); ?> >
 		<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
 		<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 100,100 ), false, '' );?>
 		<div class="post-image" style="background: url(<?php echo $src[0]; ?>) no-repeat center;background-size: cover;height:200px;"></div>

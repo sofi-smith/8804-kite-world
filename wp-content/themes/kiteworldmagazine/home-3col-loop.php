@@ -25,19 +25,6 @@
 			endif; ?>
 		</h2>
 		<?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 100,100 ), false, '' );?>
-		<div class="post-content" >
-			<?php echo get_excerpt(80); ?>
-			<?php
-			wp_link_pages(
-			array(
-				'before'           => '<div class="linked-page-nav"><p>'. __( 'This article has more parts: ', 'kiteworldmagazine' ),
-				'after'            => '</p></div>',
-				'next_or_number'   => 'number',
-				'separator'        => ' ',
-				'pagelink'         => __( '&lt;%&gt;', 'kiteworldmagazine' ),
-				)
-			);
-			?>
-		</div>
+	
 </a>
 	</article>

@@ -83,7 +83,7 @@ get_header(); ?>
               <h1>The Kiteshow</h1>
               <div class="more-container">
                 <div class="more-btn">
-									<a a href="./?page_id=23" class="btn btn-primary-fill" title="Read More Articles">
+									<a href="./the-kite-show-home/" class="btn btn-primary-fill" title="Read More Articles">
 										See more <span class="fa fa-angle-double-right"></span>
 									</a>
 								</div>
@@ -123,7 +123,7 @@ get_header(); ?>
               <h1>Where do you want to go?</h1>
 							<div class="more-container">
                 <div class="more-btn">
-									<a a href="./?page_id=23" class="btn btn-primary-fill" title="Read More Articles">
+									<a a href="./travel-home/" class="btn btn-primary-fill" title="Read More Articles">
 										See more <span class="fa fa-angle-double-right"></span>
 									</a>
 								</div>
@@ -133,7 +133,7 @@ get_header(); ?>
                                 the_block( 'travel blurb', 'type: editor' );
                             ?>
                 </div>
-                <div class="row">
+                <div class="row spacer">
                 <div class="col-md-11">
                     <?php
                                 the_block( 'travel image area left', 'type: editor' );
@@ -152,7 +152,8 @@ get_header(); ?>
                                 'orderby'                  => 'name',
                                 'order'                    => 'ASC',
                                 'hide_empty'               => 0,
-                                'taxonomy'                 => 'travel_name'
+                                'taxonomy'                 => 'travel_name',
+																'hide_empty'               => 0
                             );
                             $categories = get_categories($args);
                             foreach ($categories as $category) {
@@ -201,12 +202,8 @@ get_header(); ?>
 													'orderby'                  => 'name',
 													'order'                    => 'ASC',
 													'hide_empty'               => 0,
-													//'hierarchical'             => 1,
-													//'exclude'                  => '',
-													//'include'                  => '',
-													//'number'                   => '',
 													'taxonomy'                 => 'travel_name',
-													//'pad_counts'               => false
+
 
 												);
 												$categories = get_categories($args);
@@ -227,12 +224,8 @@ get_header(); ?>
 													'orderby'                  => 'name',
 													'order'                    => 'ASC',
 													'hide_empty'               => 0,
-													//'hierarchical'             => 1,
-													//'exclude'                  => '',
-													//'include'                  => '',
-													//'number'                   => '',
 													'taxonomy'                 => 'travel_name',
-													//'pad_counts'               => false
+
 
 												);
 												$categories = get_categories($args);
@@ -244,7 +237,7 @@ get_header(); ?>
 												wp_reset_postdata();
 												?>
                     </fieldset>
-                    <fieldset>
+                    <fieldset style="margin: 20px 0" class="btn-bar">
                         <button name="submit" class="btn btn-primary-fill">Search</button>
                     </fieldset>
                 </form>
@@ -290,6 +283,7 @@ get_header(); ?>
                              <?php
                                 the_block( 'gear image bg', 'type: editor' );
                             ?>
+                            </div>
                             <div class="gear-form-overlay">
 
 															<form class="" action="http://kite-world.co.uk/?page_id=334" method="post">
@@ -325,13 +319,13 @@ get_header(); ?>
 																				?>
 																			</select>
                                     </fieldset>
-																		<fieldset class="btn-bar">
+																		<fieldset class="btn-bar" style="margin: 20px 0">
 																			<input type="submit" name="search" value="Select &raquo;" class="btn btn-primary-fill" />
 																		</fieldset>
 
 
                                 </form>
-                            </div>
+
                             </div>
 
 
@@ -367,31 +361,20 @@ get_header(); ?>
 									</a>
 								</div>
               </div>
-                <?php
-
-                $args = array(
-                    'posts_per_page' => 8,
-                    'category_name' => 'Readers Quotes'
-                );
-                query_posts($args);
-                if ( have_posts() ):
-                    while ( have_posts() ) : the_post();
-                        get_template_part( 'loop', get_post_type() );
-                    endwhile;
-                else :
-                    get_template_part( 'loop', 'empty' );
-                endif;
-                wp_reset_query();
-                ?>
+              <div class="section-blurb">
+                    <?php
+                        the_block( 'Readers quote', 'type: editor' );
+                    ?>
+                </div>
             </section>
 
             <div class="block-out-grey">Don't miss an issue, subscribe to Kiteworld Magazine today <a class="btn btn-success">Subscribe</a></div>
 
-            <section class="page-content ninth row">
+            <section class="page-content video">
               <h1>Latest Video</h1>
               <div class="more-container">
                 <div class="more-btn">
-									<a a href="./?page_id=23" class="btn btn-primary-fill" title="Read More Articles">
+									<a a href="./video-home/" class="btn btn-primary-fill" title="Read More Articles">
 										See more <span class="fa fa-angle-double-right"></span>
 									</a>
 								</div>
@@ -416,11 +399,11 @@ get_header(); ?>
                 </div>
 
             </section>
-            <section class="page-content tenth row">
+            <section class="page-content home-featured tenth row">
               <h1>Featured Photographer</h1>
               <div class="more-container">
                 <div class="more-btn">
-									<a a href="./?page_id=23" class="btn btn-primary-fill" title="Read More Articles">
+									<a a href="./gallery-home/" class="btn btn-primary-fill" title="Read More Articles">
 										See more <span class="fa fa-angle-double-right"></span>
 									</a>
 								</div>
@@ -432,23 +415,17 @@ get_header(); ?>
                     ?>
                 </div>
 
-                <div class="col-md-5">
+                <div class="col-md-5 ad-area-container">
+                    <div class="ad-area">
                     <?php
-
-                        $args = array(
-                            'posts_per_page' => 8,
-                            'post_type' => 'gallery'
-                        );
-                        query_posts($args);
-                        if ( have_posts() ):
-                            while ( have_posts() ) : the_post();
-                                get_template_part( 'loop', get_post_type() );
-                            endwhile;
-                        else :
-                            get_template_part( 'loop', 'empty' );
-                        endif;
-                        wp_reset_query();
+                        the_block( 'ad area top', 'type: editor' );
                     ?>
+                    </div>
+                    <div class="ad-area">
+                    <?php
+                        the_block( 'ad area bottom', 'type: editor' );
+                    ?>
+                    </div>
                 </div>
             </div>
             </section>

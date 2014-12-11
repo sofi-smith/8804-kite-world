@@ -75,18 +75,11 @@ get_header(); ?>
                          <?php
                          $args = array(
                         	'type'                     => 'travel',
-                        	//'child_of'                 => 6,
                         	'parent'                   => 172,
                         	'orderby'                  => 'name',
                         	'order'                    => 'ASC',
                         	'hide_empty'               => 0,
-                        	//'hierarchical'             => 1,
-                        	//'exclude'                  => '',
-                        	//'include'                  => '',
-                        	//'number'                   => '',
                         	'taxonomy'                 => 'travel_name',
-                        	//'pad_counts'               => false
-
                         );
                           $categories = get_categories($args);
                           foreach ($categories as $category) {
@@ -106,13 +99,7 @@ get_header(); ?>
                         	'orderby'                  => 'name',
                         	'order'                    => 'ASC',
                         	'hide_empty'               => 0,
-                        	//'hierarchical'             => 1,
-                        	//'exclude'                  => '',
-                        	//'include'                  => '',
-                        	//'number'                   => '',
                         	'taxonomy'                 => 'travel_name',
-                        	//'pad_counts'               => false
-
                         );
                           $categories = get_categories($args);
                           foreach ($categories as $category) {
