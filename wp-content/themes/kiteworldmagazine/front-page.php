@@ -261,10 +261,10 @@ get_header(); ?>
                         query_posts($args);
                     if ( have_posts() ):
                         while ( have_posts() ) : the_post();
-                            get_template_part( 'loop', get_post_type() );
+                            get_template_part( 'home-3col-loop', get_post_type() );
                         endwhile;
                     else :
-                        get_template_part( 'loop', 'empty' );
+                        get_template_part( 'home-3col-loop', 'empty' );
                     endif;
                     wp_reset_query();
                 ?>
@@ -342,10 +342,10 @@ get_header(); ?>
                         query_posts($args);
                         if ( have_posts() ):
                             while ( have_posts() ) : the_post();
-                                get_template_part( 'loop', get_post_type() );
+                                get_template_part( 'home-3col-loop', get_post_type() );
                             endwhile;
                         else :
-                            get_template_part( 'loop', 'empty' );
+                            get_template_part( 'home-3col-loop', 'empty' );
                         endif;
                         wp_reset_query();
                     ?>

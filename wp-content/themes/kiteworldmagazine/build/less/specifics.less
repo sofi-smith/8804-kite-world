@@ -145,12 +145,20 @@ margin:20px 0px;
 			background-color: @base;
 			color: #fff;
 			letter-spacing: 0;
-			
+			max-height: 1em;
+
+			display: block;
+			overflow: hidden;
 		}
 		.post-content {
 			font-size: @font-size-small;
+			max-height: 3em;
+			min-height: 3em;
+			overflow: hidden;
 		}
 	}
+
+
 
 	h1.section-title {
 		margin-bottom:5px;
@@ -643,7 +651,32 @@ aside.post-aside {
 			}
 		}
 
-	.post-block.type-post {
+	.post-block {
+		.post-title {
+			font-family: @font-head-bold;
+			font-size: floor(@font-size-h2*0.8);
+			letter-spacing: 0;
+		}
+		.post-content {
+			font-size: @font-size-small;
+
+		}
+	}
+
+	.home-post-block {
+		.post-info-container {
+ 		color: @brand-primary!important;
+ 		background-color: #FFF;
+ 		padding: 20px 0px;
+ 		font-size: 13px;
+ 		a {
+ 			color: @brand-primary!important;
+ 			&:hover {
+ 				text-decoration: none!important;
+ 				color: @brand-primary!important;
+ 			}
+ 		}
+ 	}
 		.post-title {
 			font-family: @font-head-bold;
 			font-size: floor(@font-size-h2*0.8);
@@ -676,6 +709,12 @@ aside.post-aside {
 			width:33.3%;
 		}
 	}
+	//might fuck the travel page clear
+	@media (max-width: @screen-md-max) {
+	.travel.post-container article.post-block:nth-child(odd){
+		clear: none;
+	}
+}
 	.video {
 		.post-block {
 			.post-image {
